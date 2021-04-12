@@ -1,0 +1,151 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+.linkButik{
+    color: rgb(255, 255, 255);
+}
+
+/*p{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}*/
+
+h1,
+h2{
+   letter-spacing: 5px;
+    padding-bottom: 10px;
+}
+
+h1{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #242323;
+}
+
+h2{
+    border-bottom: 1px solid #ddd;
+}
+
+section{
+    margin: 20px;
+    /*background: linear-gradient(to top ,rgba(93, 119, 99, 0.849), rgba(9, 61, 21, 0.849)); /*Farve skiftes til tema-matchende farve*/
+    background-color: grey;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-left: 30rem;
+}
+
+#temp{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    /* padding-right: 20px; */
+    line-height: 25px;
+    font-size: 1.2rem;
+}
+
+#logo img{
+    width: 350px;
+    height: 120px;
+    padding-top: 20px;
+}
+
+#butikker {
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 20px;
+    line-height: 40px;
+    /*border: #000000 solid 2px;*/
+    border-radius: 10px;
+    font-size: .8rem;
+}
+
+#butikker a{
+    display: block;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 10px;
+    /*border: #000000 solid 2px;*/
+    border-radius: 10px;
+    margin-top: 20px;
+   
+}
+
+#varer {
+    color: white;
+    font-size: 1rem;
+    display: block;
+    /* align-content: left; */
+    padding: 20px;
+}
+
+#varer td,
+#varer th {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    height: 50px;
+    text-align: left;
+}
+
+#varer th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#varer img {
+    width: 100px;
+    height: auto;
+}
+
+/*#varerBody {
+    margin-top: 30px;
+    height: 500px;
+   /*display: inline-block;
+    width: 100%; 
+    overflow: auto;
+    padding: 10px;
+}*/
+
+.change {
+    margin-top: 30px;
+    height: 500px;
+    display: inline-block;
+    /* width: 100%; */
+    overflow: auto;
+}
+/* #endregion Madspild */
