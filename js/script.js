@@ -127,10 +127,10 @@ function loadTableData(navn, src, foerPris, nuPris, besparIP, besparIKR, beholdn
 
 function displayLogo(brand) { //Billeder der bruges til butikkerne
     if (brand == 'netto') {
-        document.getElementById("logo").innerHTML = "<img src='/img/netto.png' alt='Netto billede'/>";
+        document.getElementById("logo").innerHTML = "<img src='./img/netto.png' alt='Netto billede'/>";
     } else {
-        document.getElementById("logo").innerHTML = "<img src='/img/foetex.png' alt='Netto billede'/>";
-    }
+        document.getElementById("logo").innerHTML = "<img src='./img/foetex.png' alt='Netto billede'/>";
+    }//husk punktum før backslash for at loade billederne.
 }
 
 const capitalizeFirstLetter = (s) => {
