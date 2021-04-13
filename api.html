@@ -3,38 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>API Test</title>
+    <script src="https://kit.fontawesome.com/550b3be50a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Madspild</title>
 </head>
 
 <body>
-    <section id="madspild">
-        <h1>Stop madspild!</h1>
-        <p id="temp">Her har du mulighed for at se hvilke Føtex og Netto butikker, nær dig, der - netop nu, har mad-og
-            dagligvarer til ekstra nedsatte priser. <br>
-            Klik på den butik du gerne vil se vareudvalget fra, og scroll så igennem listen med de mange gode tilbud.
-            <br><br>
-            Bemærk at listen kun viser de butikker der aktuelt har tilbud.
-        </p>
-        <!-- <varer id="address">Address</varer> -->
-        <ul id="butikker"></ul>
-        <div id="logo"></div>
+    <section class="madspild">
+        <h1>STOP MADSPILD<span><img src="img/fed_gris.png" alt="Billede af en piggybank"></span></h1>
+        <div class="text_wrapper">
+            <p>
+                Her har du mulighed for at se hvilke Føtex og Netto butikker, nær sig, der - netop nu, har mad- og
+                dagligvarer til ekstra nedsatte priser.
+                <br>
+                Klik på den butik du gerne vil se udvalget fra, og scroll så igennem listen med de mange gode tilbud.
+            </p>
+
+            <div class="fotexNetto">
+                <img src="img/foetex_lille.png" alt="Føtex logo">
+                <img src="img/netto_lille.png" alt="Netto logo">
+            </div>
+
+        </div>
+
+        <p id="bemaerk"><em>Bemærk, at listen viser kun de butikker, der aktuelt har tilbud.</em></p>
+
+        <div class="butik_wrapper"></div>
 
         <table id="varer">
-            <!--<h2>Underoverskrift</h2>
-           <thead>
-                <tr>
-                    <th>Udbudte varer i valgte butik</th>
-                    <th>file name</th> 
-                </tr>
-            </thead>-->
             <tbody id="varerBody"></tbody>
         </table>
     </section>
 
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

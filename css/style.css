@@ -1,106 +1,93 @@
-
-*{
+/*--------- Globalt ---------*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
-    font-family: Verdana,
-        Geneva,
-        Tahoma,
+    font-family: 'Poppins',
         sans-serif;
 }
-
-p,
-h1,
-h2,
-h3,
-.linkButik{
-    color: rgb(255, 255, 255);
+/*----------- Fonts ---------*/
+@font-face {
+    font-family: Georgia100;
+    src: url(fonts/Georgia.ttf);
 }
 
-/*p{
-    padding-bottom: 10px;
+/*--------- Madspild --------*/
+.madspild{
+margin: 20px;
+padding: 40px;
+background-color: #e5e5e5;
+border-radius: 20px;
+width: 50%;
+}
+
+h1 span img{
+    width: 15%; /*Gør billedet responsivt*/
+    height: auto;
     padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 10px;
-    font-size: 1.2rem;
-}*/
-
-h1,
-h2{
-   letter-spacing: 5px;
-    padding-bottom: 10px;
 }
 
-h1{
+
+.madspild h1{
+    border-bottom: #000000 solid 2px;
+    text-align: center;
+    font-size: 4vw; 
+    font-family: Georgia100;
+}
+
+.text_wrapper{
+    display: flex;
+}
+
+.text_wrapper p{
+    text-align: left;
+    width: 100%;
+    font-size: 1.2vw; 
     padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 20px;
-    padding-right: 20px;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px #242323;
+}
+#bemaerk{
+   padding-bottom: 20px; 
+   padding-left: 20px;
 }
 
-h2{
-    border-bottom: 1px solid #ddd;
+.fotexNetto img{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    
 }
 
-section{
-    margin: 20px;
-    /*background: linear-gradient(to top ,rgba(93, 119, 99, 0.849), rgba(9, 61, 21, 0.849)); /*Farve skiftes til tema-matchende farve*/
-    background-color: grey;
-    border-radius: 15px;
+.fotexNetto{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 40%;
-    margin-left: 30rem;
 }
 
-#temp{
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 15px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    /* padding-right: 20px; */
-    line-height: 25px;
-    font-size: 1.2rem;
-}
 
-#logo img{
-    width: 350px;
-    height: 120px;
-    padding-top: 20px;
+
+#butik {
+
+    display: flex;
+    align-items: center
 }
 
 #butikker {
     display: block;
     text-align: left;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 20px;
-    line-height: 40px;
-    /*border: #000000 solid 2px;*/
-    border-radius: 10px;
     font-size: .8rem;
+    /* color: #000000; */
+    background-color: #707e73;
+    width: 100%;
 }
 
-#butikker a{
+#butikker a {
     display: block;
     text-align: left;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    font-size: 1.2rem;
-    line-height: 10px;
-    /*border: #000000 solid 2px;*/
-    border-radius: 10px;
-    margin-top: 20px;
-   
+    font-size: 1.1rem;
+    font-family: Georgia_100;
+    color: #000000;
 }
 
 #varer {
@@ -108,17 +95,24 @@ section{
     font-size: 1rem;
     display: block;
     /* align-content: left; */
-    padding: 20px;
 }
 
 #varer td,
 #varer th {
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
     padding: 8px;
     height: 50px;
     text-align: left;
 }
 
+#varer td h3 {
+    font-family: Georgia_100;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* NYT herfra */
 #varer th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -127,25 +121,151 @@ section{
     color: white;
 }
 
-#varer img {
-    width: 100px;
-    height: auto;
-}
-
-/*#varerBody {
-    margin-top: 30px;
-    height: 500px;
-   /*display: inline-block;
-    width: 100%; 
-    overflow: auto;
-    padding: 10px;
-}*/
-
-.change {
-    margin-top: 30px;
-    height: 500px;
+.celle1 {
+    font-family: 'Poppins',
+        sans-serif;
     display: inline-block;
-    /* width: 100%; */
-    overflow: auto;
+    border: 1px solid #707e73;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #707e73;
+    /* background-color: #ed9648; */
 }
-/* #endregion Madspild */
+
+.celle2 {
+    font-family: 'Poppins',
+        sans-serif;
+    margin: 5px;
+    /* margin-bottom: 15px; */
+    border: 1px solid #707e73;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #707e73;
+    width: 18vw;
+    height: auto;
+    cursor: pointer;
+    transition: all .6s;
+
+}
+
+.celle2:hover {
+    transition: all .6s;
+    border: 1px solid #ed9648;
+    background-color: #ed9648;
+}
+
+.celle2 p {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1vw;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.celle2_billede {
+    display: flex;
+    align-content: flex-start;
+    padding-left: 20px;
+    width: 150px;
+    height: auto;
+    /* height: 100px; */
+    border-radius: 5px;
+}
+
+.tpris {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.tpris p {
+    text-align: center;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    width: 100px;
+    margin-top: auto;
+
+}
+
+.tpris p span {
+    /* margin-left: 10px; */
+    font-size: 2rem;
+}
+
+.besparelse {
+    display: inline-block;
+    align-content: flex-start;
+    border: 1px solid #ed9648;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #ed9648;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.besparelse p {
+    font-size: 1rem;
+}
+
+.antal {
+    display: inline-block;
+    align-content: flex-start;
+    border: 1px solid #ed9648;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #ed9648;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.antal p {
+    font-size: 1rem;
+}
+
+.celle1_billede {
+    width: 100px;
+    /* height: auto; */
+    height: 100px;
+    border-radius: 5px;
+}
+
+.open p {
+    font-size: .8vw;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.butik_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-left: 20px;*/
+    margin-right: 20px;
+    /* align-items: flex-start; */
+    width: 90%;
+    /* height: 1000px; */
+    border-bottom: 2px black solid;
+    padding-bottom: 20px;
+}
+/*--------- Madspild Media Queries --------*/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .butik_wrapper{
+        flex: none;
+        width: 100%;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/*--------- Madspild slut --------*/
