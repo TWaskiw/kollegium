@@ -16,7 +16,7 @@ body {
     height: 100%;
 }
 
-.container {
+.navcontainer {
     width: 90%;
     margin: auto;
     overflow: hidden;
@@ -234,7 +234,7 @@ body {
         top: 0;
     }
 
-    .container {
+    .navcontainer {
         display: flex;
         flex-direction: row;
         position: sticky;

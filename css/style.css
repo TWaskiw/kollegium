@@ -7,6 +7,12 @@
     font-family: 'Poppins',
         sans-serif;
 }
+
+body {
+    font-family: 'Poppins';
+    background-color: #e8e8e8;
+}
+
 /*----------- Fonts ---------*/
 @font-face {
     font-family: Georgia100;
@@ -269,3 +275,204 @@ h1 span img{
 }
 
 /*--------- Madspild slut --------*/
+
+.kwrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.storwrapper:after {
+    content: ' ';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 17px;
+    height: 10em;
+    top: 380px;
+    background-image:linear-gradient(
+      to bottom,
+      rgba(232, 232, 232, 0),
+      rgba(232, 232, 232, 0.993)
+    );
+    z-index: 1;
+}
+
+.kwrapper::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.kwrapper::-webkit-scrollbar:vertical {
+    width: 20px;
+}
+
+.kwrapper::-webkit-scrollbar:horizontal {
+    height: 20px;
+}
+
+.kwrapper::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.kalender {
+    padding: 20px;
+}
+
+.tekst,
+.sammen {
+    width: 25%;
+    margin-left: 30px;
+    line-height: 22px;
+}
+
+.stor {
+    flex-basis: 100%;
+    width: 60%;
+}
+
+@media (max-width: 990px) {
+
+    .kwrapper {
+        flex-wrap: nowrap;
+    }
+
+    .tekst,
+    .sammen {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .kalender {
+        width: 100%;
+    }
+
+    .kalender stor {
+        order: 3;
+    }
+
+    .kalender tekst {
+        order: 1;
+    }
+
+    .kalender sammen {
+        order: 2;
+    }
+}
+
+.kwrapper h2,
+.container h3 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.kwrapper img,
+.kwrapper a {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: none !important;
+}
+
+.default-button {
+    background-color: #4ECC69;
+    border-radius: 100px;
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    transition-duration: 0.5s;
+    height: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+    -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
+    -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
+    box-shadow: 0 0 20px rgb(167, 167, 167);
+}
+
+.default-button:hover {
+    background-color: #71d687;
+}
+
+.sammen form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#search_input {
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-family: 'Poppins' !important;
+    margin-right: 30px !important;
+    margin-left: 30px !important;
+}
+
+.form-group label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 60%;
+    padding: .375rem .75rem;
+    padding-left: 17px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    font-family: Arial, FontAwesome;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    border-radius: 20px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-group input {
+        width: 100%;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+.form-group input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.container {
+    margin-top: 30px !important;
+}
+
+.mapsframe {
+    width: 100%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 40px;
+}
+
+.mapsframe iframe {
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.col-lg-12 {
+    text-align: center;
+}

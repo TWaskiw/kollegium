@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender ting</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Google Maps JavaScript library -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBZLIzZQsko8AJ23VWLHPIy6k3vMvhReqU">
+    </script>
+
+</head>
+
+<body>
+    <div class="storwrapper">
+    <div class="kwrapper">
+        <div class="kalender sammen">
+            <h2>Det sker på Åpark kollegiet</h2>
+            <p>Her kan du se de events der afholdes på Åpark kollegiet og forskellige spændende arrangementer rundt om i
+                Århus by.
+                <br>
+                Ønsker du at tilføje et event til kalenderen så skal du sende en mail med følgende info:
+                <ul>
+                    <li>Dato</li>
+                    <li>Klokkeslæt</li>
+                    <li>Adresse</li>
+                    <li>Pris (hvis arrangementet koster penge)</li>
+                    <li>og evt deltager-max</li>
+                </ul>
+                <form class="#" method="get" action="#">
+                    <button type="submit" class="default-button"><i class="far fa-envelope"></i>  Send en mail til bestyrelsen</button>
+                </form>
+            </p>
+
+        </div>
+        <div class="kalender stor">
+            <script type="text/javascript" src="https://stylemygcal.com/widget.js"></script>
+            <div class="smgc-calendar-placeholder" id="smgc-cal-l55Pd4QGM6FAQSno1l8g"></div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>I tvivl om hvor begivenheden finder sted?</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search_input" placeholder="&#xF002" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mapsframe"><iframe height="400" frameborder="0" scrolling="no"
+            src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=%C3%85parken%20kollegiet+(My%20Business%20Name)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+            href="https://www.maps.ie/draw-radius-circle-map/"></a></div>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
