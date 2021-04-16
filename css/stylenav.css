@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HEADER */
+#main-header {
+    background-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5em;
+}
+
+.logo {
+    padding-top: 0.9em;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+/* STYLING/POSITIONING THE HAMBURGER MENU */
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    border-color: black;
+    height: 3px;
+    width: 30px;
+    border-radius: 2px;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 10px;
+}
+
+.nav-toggle-label span::after {
+    top: 10px;
+}
+
+#nav-toggle:checked~.nav-toggle-label span {
+    background-color: transparent;
+}
+
+#nav-toggle:checked~.nav-toggle-label span::before {
+    transform: rotate(45deg);
+    bottom: 0;
+    background: black;
+}
+
+#nav-toggle:checked~.nav-toggle-label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background: black;
+}
+
+#menu {
+    position: absolute;
+    background-color: white;
+    text-align: right;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform .4s ease-in-out;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    padding: 20px 25px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+    font-weight: 400;
+}
+
+#menu a:hover {
+    color: green;
+}
+
+#nav-toggle:checked+#menu {
+    transform: scale(1, 1);
+}
+
+#nav-toggle:checked~#menu a {
+    opacity: 1;
+    transition: opacity .25s ease-in-out .35s;
+}
+
+@media screen and (max-height: 900px) {
+    #menu a {
+        font-size: 32px;
+    }
+
+    #menu {
+        margin-top: 2.5em;
+    }
+
+}
+
+.bottomnav {
+    background-color: #63f884;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    display: none;
+}
+
+.bottomnav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.bottomnav li {
+    list-style: none;
+}
+
+.bottomnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.bottomnav li:hover {
+    background-color: grey;
+}
+
+.bottommenus {
+    width: 25%;
+    margin: 16px 0;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 900px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #menu {
+        position: sticky;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        color: black;
+        transform: scale(1, 1);
+        top: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        position: sticky;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    #menu li {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+
+    #menu a {
+        opacity: 1;
+        flex-direction: row;
+        color: black;
+        font-size: 24px;
+        padding: 10px 5px;
+    }
+
+    nav {
+        display: block;
+        z-index: 1000;
+    }
+
+}
