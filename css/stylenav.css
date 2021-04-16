@@ -155,13 +155,13 @@ body {
 
 }*/
 
+
+/* Bottom navgiation */
 .bottomnav {
-    background-color: #63f884;
     position: fixed;
     bottom: 0;
     width: 100%;
     flex-direction: row;
-    display: none;
 }
 
 .bottomnav ul {
@@ -181,26 +181,45 @@ body {
     font-size: 12px;
 }
 
-.bottomnav li:hover {
-    background-color: grey;
+.bottommenus {
+    background-color: #63f884;
+    height: 100%;
+    width: 20%;
+    padding: 16px 0;
+    text-align: center;
 }
 
-.bottommenus {
-    width: 25%;
-    margin: 16px 0;
-    text-align: center;
+.bottommenus a {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottommenus:hover {
+    background-color: white;
+}
+
+.border {
+    border-right: whitesmoke 1px solid;
+}
+
+.fas {
+    margin-bottom: 4px;
+}
+
+.far {
+    margin-bottom: 4px;
 }
 
 /*----------Media Queries--------*/
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
+
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-     .nav-toggle-label {
+    .nav-toggle-label {
         display: none;
     }
 
@@ -246,7 +265,11 @@ body {
         display: block;
         z-index: 1000;
     }
+
+    .bottomnav {
+        display: none;
+    }
 }
+
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
