@@ -3,13 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    font-family: 'Poppins',
-        sans-serif;
+    font-family: 'Poppins' !important;
 }
 
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins' !important;
     background-color: #e8e8e8;
 }
 
@@ -19,58 +17,62 @@ body {
     src: url(fonts/Georgia.ttf);
 }
 
+/*--------- Forside --------*/
+
+
 /*--------- Madspild --------*/
-.madspild{
-margin: 20px;
-padding: 40px;
-background-color: #e5e5e5;
-border-radius: 20px;
-width: 50%;
+.madspild {
+    margin: 20px;
+    padding: 40px;
+    background-color: #e5e5e5;
+    border-radius: 20px;
+    width: 50%;
 }
 
-h1 span img{
-    width: 15%; /*Gør billedet responsivt*/
+h1 span img {
+    width: 15%;
+    /*Gør billedet responsivt*/
     height: auto;
     padding-left: 20px;
 }
 
 
-.madspild h1{
+.madspild h1 {
     border-bottom: #000000 solid 2px;
     text-align: center;
-    font-size: 4vw; 
+    font-size: 4vw;
     font-family: Georgia100;
 }
 
-.text_wrapper{
+.text_wrapper {
     display: flex;
 }
 
-.text_wrapper p{
+.text_wrapper p {
     text-align: left;
     width: 100%;
-    font-size: 1.2vw; 
+    font-size: 1.2vw;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
 }
-#bemaerk{
-   padding-bottom: 20px; 
-   padding-left: 20px;
+
+#bemaerk {
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 
-.fotexNetto img{
+.fotexNetto img {
     width: 100%;
     height: auto;
     padding: 20px;
-    
+
 }
 
-.fotexNetto{
+.fotexNetto {
     display: flex;
     flex-direction: column;
 }
-
 
 
 #butik {
@@ -255,27 +257,29 @@ h1 span img{
     border-bottom: 2px black solid;
     padding-bottom: 20px;
 }
+
 /*--------- Madspild Media Queries --------*/
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .butik_wrapper{
+    .butik_wrapper {
         flex: none;
         width: 100%;
     }
 }
+
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
+@media (min-width: 992px) {}
+
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
 
 /*--------- Madspild slut --------*/
 
+/*--------- Det sker/kalender start --------*/
 .kwrapper {
     display: flex;
     flex-direction: column;
@@ -286,6 +290,10 @@ h1 span img{
     position: relative;
 }
 
+.storwrapper {
+    padding-top: 130px;
+}
+
 .storwrapper:after {
     content: ' ';
     width: 100%;
@@ -293,12 +301,10 @@ h1 span img{
     left: 0;
     right: 17px;
     height: 10em;
-    top: 380px;
-    background-image:linear-gradient(
-      to bottom,
-      rgba(232, 232, 232, 0),
-      rgba(232, 232, 232, 0.993)
-    );
+    top: 500px;
+    background-image: linear-gradient(to bottom,
+            rgba(232, 232, 232, 0),
+            rgba(232, 232, 232, 0.993));
     z-index: 1;
 }
 
@@ -316,7 +322,7 @@ h1 span img{
 
 .kwrapper::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    border: 2px solid white;
+    border: 2px solid #e8e8e8; /*HUSK SAMME FARVE SOM BAGGRUND */
     background-color: rgba(0, 0, 0, .5);
 }
 
@@ -324,12 +330,17 @@ h1 span img{
     padding: 20px;
 }
 
+.sammen ul {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
 .tekst,
 .sammen {
     width: 25%;
     margin-left: 30px;
     line-height: 22px;
 }
+
 
 .stor {
     flex-basis: 100%;
@@ -476,3 +487,6 @@ h1 span img{
 .col-lg-12 {
     text-align: center;
 }
+
+/*--------- Det sker/kalender slut --------*/
+

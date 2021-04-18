@@ -7,6 +7,7 @@
     <title>Kalender ting</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylenav.css">
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -17,7 +18,26 @@
 
 </head>
 
+<header id="main-header">
+    <div class="navcontainer">
+        <a href="index.html" class="logo"><img src="./img/Logo.svg" alt="Navigation logo" width="150px"></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Bolig</a></li>
+                <li><a href="#" class="aktiv">Det sker</a></li>
+                <li><a href="#">Beboermappe</a></li>
+                <li><a href="#">Varmemester</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+</header>
 <body>
+    
     <div class="storwrapper">
     <div class="kwrapper">
         <div class="kalender sammen">
@@ -56,9 +76,30 @@
             </div>
         </div>
     </div>
-    <div class="mapsframe"><iframe height="400" frameborder="0" scrolling="no"
+    <div class="mapsframe">
+        <iframe height="400" frameborder="0" scrolling="no"
             src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=%C3%85parken%20kollegiet+(My%20Business%20Name)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
             href="https://www.maps.ie/draw-radius-circle-map/"></a></div>
+
+            <nav class="bottomnav">
+                <ul>
+                    <div class="bottommenus border">
+                        <li><a href="#"><i class="far fa-building fa-lg"></i>Bolig</a></li>
+                    </div>
+                    <div class="bottommenus active">
+                        <li><a href="#"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></li>
+                    </div>
+                    <div class="bottommenus border">
+                        <li><a href="#"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></li>
+                    </div>
+                    <div class="bottommenus border">
+                        <li><a href="#"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></li>
+                    </div>
+                    <div class="bottommenus">
+                        <li><a href="#"><i class="fas fa-sign-in-alt fa-lg"></i>Login</a></li>
+                    </div>
+                </ul>
+            </nav>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
 </body>

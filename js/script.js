@@ -148,6 +148,7 @@ const formatTime = (s) => {
 
 //#endregion madSpild
 
+// Google Autosearch API
 var searchInput = 'search_input';
  
 $(document).ready(function () {
