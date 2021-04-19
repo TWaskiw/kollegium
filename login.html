@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalender ting</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -14,12 +14,12 @@
     <script
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBZLIzZQsko8AJ23VWLHPIy6k3vMvhReqU">
         </script>
-
+    <title>Åpark Kollegiet | Login</title>
 </head>
 
 <header id="main-header">
     <div class="navcontainer">
-        <a href="index.html" class="logo"><img src="./img/Logo.png" alt="Navigation logo" width="150px"></a>
+        <a href="index.html" class="logo"><img src="img/Logo.png" alt="Navigation logo" width="150px"></a>
         <nav id="menu">
             <ul>
                 <li><a href="#">Bolig</a></li>
@@ -34,20 +34,17 @@
 </header>
 
 <div class="overlay">
-    <!-- LOGN IN FORM by Omar Dsoky -->
     <form>
-        <!--   con = Container  for items in the form-->
+        <!--con = Container  for items in the form-->
         <div class="con">
             <hr class="line">
             <img class="loginImg" src="/img/woman-login.png" alt="Smiling woman with glasses, standing in a field">
-
             <div class="field-set">
 
+                <!--User name Input-->
+                <input class="form-input" id="txt-input" type="text" placeholder="dinmail@mail.dk">
 
-                <!--  user name Input-->
-                <input class="form-input" id="txt-input" type="text" placeholder="@Brugernavn">
-                <br>
-                <input class="form-input" type="password" placeholder="Password" id="pwd" name="password">
+                <input class="form-input" type="password" placeholder="Skriv dit kodeord her" id="pwd" name="#">
                 <button class="log-in">Log ind</button><br>
 
                 <label class="login_container">
@@ -57,27 +54,25 @@
 
 
                 <!--      Forgot Password button-->
-                <button class="glemt-pass">Glemt kodeord?</button>
+                <button class="glemt-pass" id="myBtn">Glemt kodeord?</button>
             </div>
 
             <!--   other buttons -->
             <div class="login-info">
 
-
+                <hr class="hr_glemt">
                 <!--      End Other the Division -->
 
                 <div class="login-first-visit">
                     <h2>Er dette dit første besøg?</h2>
                     <p>Som beboer på Åpark kollegie har du adgang til en fælleskalender.<br>I kalenderen vil du finde en
                         lang række arrangementer og events for alle beboere - men før du kan logge ind, skal vi give dig
-                        adgang.<br><br>Indtast din e-mail herunder for at modtage dit Kodeord</p><br>
+                        adgang.<br><br>Indtast din e-mail herunder for at modtage dit Kodeord</p>
                     <input class="form-input" id="email-input" type="text" placeholder="@E-mail">
-                    <!--     Information button -->
-                    <button class="information">
-                        <!--"btn submits sign-up"-->
-                        <!--         Sign Up font icon -->
-                        <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
-                    </button>
+
+                    <a id="infoBtn" href='#'><i class="fa fa-info-circle"></i></a>
+
+                    <button class="glemtmail">Send</button>
                 </div>
             </div>
 
@@ -86,7 +81,20 @@
 
         <!-- End Form -->
     </form>
+    <div id="infoModal" class="info_modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Du skal indtaste den e-mail, du oplyste ved indflytning eller ved tilmelding til
+                modtagelse af digital post
+            </p><br>
+            <p>Der går maksimalt en time, før du modtager din nye adgangskode</p>
+        </div>
+    </div>
 </div>
+
+<!-- Navigation -->
 <nav class="bottomnav">
     <ul>
         <div class="bottommenus border">
@@ -101,10 +109,7 @@
         <div class="bottommenus border">
             <li><a href="#"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></li>
         </div>
-        <div class="bottommenus">
-            <li><a href="#"><i class="fas fa-sign-in-alt fa-lg"></i>Login</a></li>
-        </div>
     </ul>
 </nav>
-
-<script src="../js/script.js"></script>
+<script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
