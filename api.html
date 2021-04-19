@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylenav.css">
     <script src="https://kit.fontawesome.com/550b3be50a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
@@ -12,34 +13,81 @@
     <title>Madspild</title>
 </head>
 
-<body>
-    <section class="madspild">
-        <h1>STOP MADSPILD<span><img src="img/fed_gris.png" alt="Billede af en piggybank"></span></h1>
-        <div class="text_wrapper">
-            <p>
-                Her har du mulighed for at se hvilke Føtex og Netto butikker, nær sig, der - netop nu, har mad- og
-                dagligvarer til ekstra nedsatte priser.
-                <br>
-                Klik på den butik du gerne vil se udvalget fra, og scroll så igennem listen med de mange gode tilbud.
-            </p>
 
-            <div class="fotexNetto">
-                <img src="img/foetex_lille.png" alt="Føtex logo">
-                <img src="img/netto_lille.png" alt="Netto logo">
+<header id="main-header">
+    <div class="navcontainer">
+        <a href="index.html" class="logo"><img src="./img/Logo.svg" alt="Navigation logo" width="150px"></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Bolig</a></li>
+                <li><a href="#" class="aktiv">Det sker</a></li>
+                <li><a href="#">Beboermappe</a></li>
+                <li><a href="#">Varmemester</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+</header>
+
+<body>
+    <div class="madspild_wrapper">
+        <section class="madspild">
+            <div class="bgAPI">
+                <div class="textAPI">
+                    <h1>INDKØB PÅ SU</h1>
+                </div>
             </div>
 
-        </div>
+            <div class="text_wrapper">
+                <p>
+                    Her har du mulighed for at se hvilke Føtex og Netto butikker, nær sig, der - netop nu, har mad- og
+                    dagligvarer til ekstra nedsatte priser.
+                    <br>
+                    Klik på den butik du gerne vil se udvalget fra, og scroll så igennem listen med de mange gode
+                    tilbud.
+                </p>
 
-        <p id="bemaerk"><em>Bemærk, at listen viser kun de butikker, der aktuelt har tilbud.</em></p>
+                <div class="fotexNetto">
+                    <img src="img/foetex_lille.png" alt="Føtex logo">
+                    <img src="img/netto_lille.png" alt="Netto logo">
+                </div>
 
-        <div class="butik_wrapper"></div>
+            </div>
 
-        <table id="varer">
-            <tbody id="varerBody"></tbody>
-        </table>
-    </section>
+            <p id="bemaerk"><em>Bemærk, at listen kun viser de butikker, der aktuelt har tilbud.</em></p>
 
+            <div class="butik_wrapper"></div>
+
+            <table id="varer">
+                <tbody id="varerBody"></tbody>
+            </table>
+        </section>
+    </div>
+    <nav class="bottomnav">
+        <ul>
+            <div class="bottommenus border">
+                <li><a href="#"><i class="far fa-building fa-lg"></i>Bolig</a></li>
+            </div>
+            <div class="bottommenus active">
+                <li><a href="#"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></li>
+            </div>
+            <div class="bottommenus border">
+                <li><a href="#"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></li>
+            </div>
+            <div class="bottommenus border">
+                <li><a href="#"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></li>
+            </div>
+            <div class="bottommenus">
+                <li><a href="#"><i class="fas fa-sign-in-alt fa-lg"></i>Login</a></li>
+            </div>
+        </ul>
+    </nav>
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

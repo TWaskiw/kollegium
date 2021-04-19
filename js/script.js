@@ -53,6 +53,7 @@ xhr.onreadystatechange = function () {
         for (const link of linkButik) {
             link.addEventListener('click', function () {
                 visVarer(this.id)
+                document.getElementById('varer').style.height = '500px'
 
             })
         }
@@ -150,17 +151,17 @@ const formatTime = (s) => {
 
 // Google Autosearch API
 var searchInput = 'search_input';
- 
+
 $(document).ready(function () {
- var autocomplete;
- autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-  types: ['geocode'],
-  componentRestrictions: {
-   country: "DK"
-  }
- });
-  
- google.maps.event.addListener(autocomplete, 'place_changed', function () {
-  var near_place = autocomplete.getPlace();
- });
+    var autocomplete;
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        types: ['geocode'],
+        componentRestrictions: {
+            country: "DK"
+        }
+    });
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var near_place = autocomplete.getPlace();
+    });
 });

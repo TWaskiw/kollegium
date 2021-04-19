@@ -128,7 +128,7 @@ body {
 #menu a {
     text-decoration: none;
     color: black;
-    font-size: 10px;
+    /*font-size: 10px;*/
     opacity: 0;
     transition: opacity .15s ease-in-out;
     font-weight: bolder;
