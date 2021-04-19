@@ -39,8 +39,6 @@ body {
     display: none;
 }
 
-
-
 .nav-search {
     display: flex;
     align-self: center;
@@ -81,6 +79,18 @@ body {
     transition: opacity .15s ease-in-out;
     font-weight: bolder;
     text-transform: uppercase;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+}
+
+.aktivmenu {
+    background-color: #4ECC69;
+    border-radius: 20px;
+    color: white !important;
+}
+
+.aktivmenu:hover {
+    background-color: #71d687;
 }
 
 #menu a:hover {
@@ -666,7 +676,7 @@ article button:hover {
     left: 0;
     right: 17px;
     height: 10em;
-    top: 500px;
+    top: 520px;
     background-image: linear-gradient(to bottom,
             rgba(232, 232, 232, 0),
             rgba(232, 232, 232, 0.993));
@@ -757,6 +767,7 @@ article button:hover {
 }
 
 .default-button {
+    z-index: 999;
     background-color: #4ECC69;
     border-radius: 100px;
     border-style: none;
@@ -772,8 +783,11 @@ article button:hover {
 }
 
 .default-button:hover {
+    z-index: 999;
     background-color: #71d687;
 }
+
+
 
 .sammen form {
     margin-left: auto;
