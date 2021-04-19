@@ -345,7 +345,7 @@ tbody {
     color: #000000;
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 4.3vw;
+    font-size: 16px;
 }
 
 #varer th {
@@ -445,15 +445,15 @@ tbody {
     border: 1px solid #ed9648;
     background-color: #ed9648;
     border-radius: 10px;
-    font-size: 1.7rem;
     text-align: center;
     margin-top: 5px;
-    width: 45%;
+    width: 40%;
+    font-size: 25px;
 
 }
 
 .besparelse p {
-    font-size: 1rem;
+    font-size: 12px;
 }
 
 .antal {
@@ -462,15 +462,15 @@ tbody {
     border: 1px solid #ed9648;
     background-color: #ed9648;
     border-radius: 10px;
-    font-size: 1.7rem;
     text-align: center;
     margin-left: 5px;
-    width: 45%;
+    width: 40%;
+    font-size: 25px;
 
 }
 
 .antal p {
-    font-size: 1rem;
+    font-size: 12px;
 }
 
 .celle1_billede {
@@ -541,10 +541,7 @@ article button:hover {
     background-color: #71d687;
 }
 
-
-
-
-/*--------- Madspild Media Queries --------*/
+/*--------- Media Queries --------*/
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -646,8 +643,6 @@ article button:hover {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
-
-/*--------- Madspild slut --------*/
 
 /*--------- Det sker/kalender start --------*/
 .kwrapper {

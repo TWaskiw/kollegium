@@ -119,9 +119,9 @@ function loadTableData(navn, src, foerPris, nuPris, besparIP, besparIKR, beholdn
     let date = row.insertCell(0);
     if (src === null) {
 
-        date.innerHTML = "<h3>" + navn + "</h3><div class='celle1'><div class='tpris'><img class='celle1_billede' src='img/intet_billede.jpeg' alt='Intet billede'" + '' + "></img><p>kr. <span>" + nuPris + ",-</span></p></div></div><div class='besparelse'><p>Besparelse</p>-" + besparelse + "%</div><div class='antal'><p>Antal</p>" + beholdning + " stk.</div>";
+        date.innerHTML = "<h3>" + navn + "</h3><div class='celle1'><div class='tpris'><img class='celle1_billede' src='img/intet_billede.jpeg' alt='Intet billede'" + '' + "></img><p>kr. <span>" + nuPris + ",-</span></p></div></div><div class='besparelse'><p>Besparelse</p>" + besparelse + "%</div><div class='antal'><p>Antal</p>" + beholdning + " stk.</div>";
     } else {
-        date.innerHTML = "<h3>" + navn + "</h3><div class='celle1'><div class='tpris'><img class='celle1_billede' src=" + getMeta(src) + "></img><p class='pris'>kr. <span>" + nuPris + ",-</span></p></div></div><div class='besparelse'><p>Besparelse</p>-" + besparelse + "%</div><div class='antal'><p>Antal</p>" + beholdning + " stk.</div>";
+        date.innerHTML = "<h3>" + navn + "</h3><div class='celle1'><div class='tpris'><img class='celle1_billede' src=" + getMeta(src) + "></img><p class='pris'>kr. <span>" + nuPris + ",-</span></p></div></div><div class='besparelse'><p>Besparelse</p>" + besparelse + "%</div><div class='antal'><p>Antal</p>" + beholdning + " stk.</div>";
     }
 
 };
