@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins' !important;
+    font-family: 'Poppins';
 }
 
 body {
-    font-family: 'Poppins' !important;
+    font-family: 'Poppins';
     /*background-color: #e8e8e8;*/
     background-color: fff;
 }
@@ -19,30 +19,59 @@ body {
 }
 
 /*--------- Forside --------*/
+.forsidecontent {
+    width: 100%;
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
 
+.hero {
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/IMG_7179.JPG);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+article {
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    margin: 2em 0;
+    width: 90%;
+    height: 100px;
+}
 
 /*--------- Madspild --------*/
-.madspild{
-/*margin: 20px;*/
-padding-left: 30px;
-padding-top: 20px;
-background-color: fff;
-border-radius: 20px;
-width: 100%;
+.madspild {
+    /*margin: 20px;*/
+    padding-left: 30px;
+    padding-top: 20px;
+    background-color: fff;
+    border-radius: 20px;
+    width: 100%;
 
 }
 
-.madspild h1{
+.madspild h1 {
     /*border-bottom: #000000 solid 2px;*/
     width: 90%;
     text-align: center;
-    font-size: 2.5vh; 
+    font-size: 2.5vh;
     letter-spacing: 2px;
     font-weight: bold;
     z-index: 1;
 }
 
-.bgAPI{
+.bgAPI {
     background-image: url(/img/baggrund_API.jpeg);
     background-repeat: no-repeat;
     position: relative;
@@ -51,42 +80,43 @@ width: 100%;
     color: black;
 }
 
-.textAPI h1{
+.textAPI h1 {
     padding-top: 70px;
     padding-left: 20px;
 }
 
-.text_wrapper{
+.text_wrapper {
     display: flex;
 }
 
-.text_wrapper p{
+.text_wrapper p {
     text-align: left;
     width: 100%;
-    font-size: 1vh; 
+    font-size: 1vh;
     padding-top: 20px;
     padding-bottom: 20px;
     letter-spacing: 1.2px;
-    
-}
-#bemaerk{
-   padding-bottom: 10px; 
-   margin-right: 25px;
-   font-size: 1vh;
-   font-weight: bold;
-   letter-spacing: 1px;
+
 }
 
-.fotexNetto img{
+#bemaerk {
+    padding-bottom: 10px;
+    margin-right: 25px;
+    font-size: 1vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.fotexNetto img {
     width: 100%;
     height: auto;
     padding-left: 10px;
     padding-right: 40px;
     padding-top: 30px;
-    
+
 }
 
-.fotexNetto{
+.fotexNetto {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -114,7 +144,7 @@ width: 100%;
     color: #000000;
 }
 
-tbody{
+tbody {
     margin-top: 0px;
 }
 
@@ -157,7 +187,7 @@ tbody{
     padding: 10px;
     background-color: #707e73;
     border: 1px solid #707e73;
-    
+
 }
 
 .celle2 {
@@ -167,7 +197,7 @@ tbody{
     border-radius: 15px;
     padding: 10px;
     background-color: #707e73;
-   /*width: 18vw;*/
+    /*width: 18vw;*/
     height: auto;
     cursor: pointer;
     transition: all .6s;
@@ -201,24 +231,24 @@ tbody{
     border-radius: 5px;
 }
 
-.celle1{
+.celle1 {
     width: 300px;
 }
 
-.celle1 .pris{
+.celle1 .pris {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.celle1 .pris span{
+.celle1 .pris span {
     padding-left: 5px;
 }
 
 .tpris {
     display: flex;
     max-height: 100%;
-   
+
     /* justify-content: space-around; */
 }
 
@@ -245,7 +275,7 @@ tbody{
     text-align: center;
     margin-top: 5px;
     width: 45%;
-    
+
 }
 
 .besparelse p {
@@ -262,7 +292,7 @@ tbody{
     text-align: center;
     margin-left: 5px;
     width: 45%;
-    
+
 }
 
 .antal p {
@@ -271,7 +301,7 @@ tbody{
 
 .celle1_billede {
     max-width: 50%;
-    max-height:100px;
+    max-height: 100px;
     border-radius: 5px;
 }
 
@@ -294,25 +324,24 @@ tbody{
     overflow-y: scroll;
 }
 
-.madspild_wrapper{
+.madspild_wrapper {
     padding-top: 100px;
     z-index: 1;
 }
+
 /*--------- Madspild Media Queries --------*/
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
+
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-   
-}
+@media (min-width: 768px) {}
+
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
+@media (min-width: 992px) {}
+
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
 
 /*--------- Madspild slut --------*/
 
@@ -359,7 +388,8 @@ tbody{
 
 .kwrapper::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    border: 2px solid #e8e8e8; /*HUSK SAMME FARVE SOM BAGGRUND */
+    border: 2px solid #e8e8e8;
+    /*HUSK SAMME FARVE SOM BAGGRUND */
     background-color: rgba(0, 0, 0, .5);
 }
 
@@ -371,6 +401,7 @@ tbody{
     margin-left: 30px;
     margin-bottom: 15px;
 }
+
 .tekst,
 .sammen {
     width: 25%;
@@ -526,4 +557,3 @@ tbody{
 }
 
 /*--------- Det sker/kalender slut --------*/
-
