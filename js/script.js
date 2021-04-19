@@ -10,8 +10,8 @@ let produkter = []
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
         let obj = JSON.parse(xhr.responseText);
-        console.log(xhr.status);
-        console.log(obj);
+        //console.log(xhr.status);
+        //console.log(obj);
 
         let butik
         let vare

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender ting</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Google Maps JavaScript library -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBZLIzZQsko8AJ23VWLHPIy6k3vMvhReqU">
+        </script>
+
+</head>
+
+<header id="main-header">
+    <div class="navcontainer">
+        <a href="index.html" class="logo"><img src="./img/Logo.svg" alt="Navigation logo" width="150px"></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Bolig</a></li>
+                <li><a href="#">Det sker</a></li>
+                <li><a href="#">Beboermappe</a></li>
+                <li><a href="#">Varmemester</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </div>
+</header>
+
+<div class="overlay">
+    <!-- LOGN IN FORM by Omar Dsoky -->
+    <form>
+        <!--   con = Container  for items in the form-->
+        <div class="con">
+            <hr class="line">
+            <img class="loginImg" src="/img/woman-login.png" alt="Smiling woman with glasses, standing in a field">
+
+            <div class="field-set">
+
+
+                <!--  user name Input-->
+                <input class="form-input" id="txt-input" type="text" placeholder="@Brugernavn">
+                <br>
+                <input class="form-input" type="password" placeholder="Password" id="pwd" name="password">
+                <button class="log-in">Log ind</button><br>
+
+                <label class="login_container">
+                    <input type="checkbox">Husk mig
+                    <span class="checkmark"></span>
+                </label>
+
+
+                <!--      Forgot Password button-->
+                <button class="glemt-pass">Glemt kodeord?</button>
+            </div>
+
+            <!--   other buttons -->
+            <div class="login-info">
+
+
+                <!--      End Other the Division -->
+
+                <div class="login-first-visit">
+                    <h2>Er dette dit første besøg?</h2>
+                    <p>Som beboer på Åpark kollegie har du adgang til en fælleskalender.<br>I kalenderen vil du finde en
+                        lang række arrangementer og events for alle beboere - men før du kan logge ind, skal vi give dig
+                        adgang.<br><br>Indtast din e-mail herunder for at modtage dit Kodeord</p><br>
+                    <input class="form-input" id="email-input" type="text" placeholder="@E-mail">
+                    <!--     Information button -->
+                    <button class="information">
+                        <!--"btn submits sign-up"-->
+                        <!--         Sign Up font icon -->
+                        <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!--   End Conrainer  -->
+        </div>
+
+        <!-- End Form -->
+    </form>
+</div>
+<nav class="bottomnav">
+    <ul>
+        <div class="bottommenus border">
+            <li><a href="#"><i class="far fa-building fa-lg"></i>Bolig</a></li>
+        </div>
+        <div class="bottommenus border">
+            <li><a href="#"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></li>
+        </div>
+        <div class="bottommenus border">
+            <li><a href="#"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></li>
+        </div>
+        <div class="bottommenus border">
+            <li><a href="#"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></li>
+        </div>
+        <div class="bottommenus">
+            <li><a href="#"><i class="fas fa-sign-in-alt fa-lg"></i>Login</a></li>
+        </div>
+    </ul>
+</nav>
+
+<script src="../js/script.js"></script>
