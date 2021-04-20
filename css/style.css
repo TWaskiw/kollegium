@@ -266,6 +266,7 @@ article button:hover {
 }
 
 .calender-daily {
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -627,7 +628,7 @@ article button:hover {
   }
 
   .calender-daily h2 {
-    font-size: 75%;
+    font-size: 65%;
   }
 
   .error-message img {
