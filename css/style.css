@@ -1302,3 +1302,44 @@ input[id='email-input'] {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
+
+.footercontainer {
+  background-image: url('../img/wave.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 45vh;
+  position: relative;
+}
+
+.footercontainer img {
+  max-width: 33%;
+  max-height: 33%;
+}
+
+.footercontainer p {
+  color: white;
+  position:absolute;
+  bottom: 30px;
+  right:0;
+  text-align: right;
+  font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .footercontainer p {
+    bottom: 80px;
+    font-size: 10px;
+  }
+
+  .footercontainer {
+    height: 30vh;
+    overflow: hidden;
+  }
+
+  .footercontainer img {
+    max-width: 25%;
+    max-height: 25%;
+  }
+}
