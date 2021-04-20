@@ -709,6 +709,10 @@ article button:hover {
   margin-bottom: 15px;
 }
 
+.sammen p {
+  color: rgb(20, 20, 20);
+}
+
 .tekst,
 .sammen {
   width: 25%;
@@ -866,7 +870,7 @@ article button:hover {
 /*--------- Det sker/kalender slut --------*/
 
 /*------------Login/glemt password og popup start-------------*/
-form {
+.loginform {
   max-width: 550px;
   min-height: 700px;
   height: auto;
