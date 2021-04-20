@@ -147,6 +147,7 @@ body {
 .bottommenus a {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .bottommenus:hover {
@@ -246,6 +247,11 @@ article button {
 
 article button:hover {
   background-color: #71d687;
+}
+
+article button a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .calender-wrap {
@@ -375,6 +381,7 @@ article button:hover {
 
 #butikker a {
   display: block;
+  text-decoration: none;
   text-align: left;
   font-size: 1.1rem;
   color: #000000;
@@ -590,6 +597,7 @@ tbody {
   font-family: 'Poppins';
   font-size: 22px;
   font-weight: bolder;
+  text-decoration: none !important;
 }
 
 .error-message button:hover {
@@ -696,6 +704,7 @@ article button:hover {
 
   #menu a {
     opacity: 1;
+    text-decoration: none;
     flex-direction: row;
     color: rgb(71, 71, 71);
     font-size: 20px;
@@ -844,11 +853,16 @@ article button:hover {
   -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
   -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
   box-shadow: 0 0 20px rgb(167, 167, 167);
+  text-decoration: none;
 }
 
 .default-button:hover {
   z-index: 999;
   background-color: #71d687;
+}
+
+.default-button a {
+  text-decoration: none;
 }
 
 .sammen form {
@@ -991,6 +1005,7 @@ article button:hover {
   display: flex;
   flex-direction: column;
   width: 70%;
+  text-align: center;
 }
 
 .log-in {
@@ -1000,10 +1015,10 @@ article button:hover {
   background-color: #4ecc69;
   border-radius: 100px;
   border-style: none;
-
   cursor: pointer;
   color: white;
   transition-duration: 0.5s;
+  text-decoration: none;
   height: 40px;
   width: 100%;
   -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
@@ -1011,6 +1026,11 @@ article button:hover {
   box-shadow: 0 0 20px rgb(167, 167, 167);
   margin-top: 10px;
   letter-spacing: 0.05em;
+}
+
+.log-in:hover {
+  background-color: #71d687;
+  color: white;
 }
 
 #loginBtn {
@@ -1036,6 +1056,11 @@ article button:hover {
   -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
   -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
   box-shadow: 0 0 20px rgb(167, 167, 167);
+}
+
+.glemtmail:hover {
+  background-color: #71d687;
+  color: white;
 }
 
 .login-first-visit h2 {
@@ -1269,6 +1294,14 @@ input[id='email-input'] {
   cursor: pointer;
 }
 
+.fa-info-circle {
+  transition-duration: 0.5s;
+}
+
+.fa-info-circle:hover {
+  opacity: 0.5;
+}
+
 #infoBtn .fa-info-circle {
   font-size: 2vh;
   color: #000;
@@ -1382,6 +1415,7 @@ input[id='email-input'] {
   margin-top: 20px;
   width: 70%;
   position:absolute;
+  text-decoration: none;
 }
 
 .previous {
@@ -1392,6 +1426,13 @@ input[id='email-input'] {
   text-align: center;
   color: white;
   line-height: 50px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.previous:hover {
+background-color: #71d687;
+color: white;
 }
 
 .tilbage_knappen a {
@@ -1466,9 +1507,7 @@ input[class='form-input_nulstilling'] {
 }
 
 .nulstilling_mail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   background-color: #4ecc69;
   border-radius: 100px;
   border-style: none;
@@ -1485,6 +1524,10 @@ input[class='form-input_nulstilling'] {
   -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
   -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
   box-shadow: 0 0 20px rgb(167, 167, 167);
+}
+
+.nulstilling_mail:hover {
+  background-color: #71d687;
 }
 
 .hr_glemt_streg{
@@ -1572,6 +1615,7 @@ input[class='form-input_nulstilling'] {
   right:0;
   text-align: right;
   font-size: 20px;
+  margin-right: 10px;
 }
 
 @media (max-width: 992px) {
