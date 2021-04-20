@@ -588,6 +588,14 @@ tbody {
   font-weight: bolder;
 }
 
+.error-message button:hover {
+  background-color: #71d687;
+}
+
+.fa-chevron-left {
+  font-size: smaller;
+}
+
 article button:hover {
   background-color: #71d687;
 }
