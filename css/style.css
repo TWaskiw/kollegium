@@ -171,6 +171,8 @@ body {
 }
 
 /*--------- Forside --------*/
+
+/*--------- Forside --------*/
 .forsidecontent {
   width: 100%;
   padding-top: 130px;
@@ -198,20 +200,25 @@ body {
 }
 
 article {
-  border: 1px solid rgb(226, 226, 226);
+  border: 1px solid rgb(247, 247, 247);
   border-radius: 20px;
   margin: 2em 0;
   width: 90%;
   padding: 1em;
   overflow-wrap: break-word;
+  background: rgb(235, 235, 235);
 }
 
 article p {
   color: black;
 }
 
-article h1 {
+.articlename {
+  color: white;
+  font-weight: 400;
   font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid green;
 }
 
 article li {
@@ -240,7 +247,6 @@ article button {
 article button:hover {
   background-color: #71d687;
 }
-
 
 .calender-wrap {
   margin: 1em 1em 1em 0;
