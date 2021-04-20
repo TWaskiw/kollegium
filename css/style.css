@@ -249,7 +249,7 @@ article button:hover {
 }
 
 .calender-wrap {
-  margin: 1em 1em 1em 0;
+  margin-top: 1em;
   overflow-wrap: break-word;
 }
 
