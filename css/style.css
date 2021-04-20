@@ -582,6 +582,7 @@ tbody {
 
 .error-message button {
   margin: 3em 0;
+  text-decoration: none;
   background-color: #4ecc69;
   border-radius: 50px;
   border-style: none;
@@ -597,11 +598,16 @@ tbody {
   font-family: 'Poppins';
   font-size: 22px;
   font-weight: bolder;
-  text-decoration: none !important;
 }
 
 .error-message button:hover {
   background-color: #71d687;
+  color: white;
+}
+
+.error-message button a {
+  text-decoration: none;
+  color: white;
 }
 
 .fa-chevron-left {
