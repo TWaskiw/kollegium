@@ -151,30 +151,51 @@ const formatTime = (s) => {
 //#region Modal
 
 // Get the modal
-let modal = document.getElementById('infoModal')
+let loginModal = document.getElementById('loginModal')
 
 // Get the button that opens the modal
-let btn = document.getElementById('infoBtn')
+let loginBtn = document.getElementById('loginBtn')
+
+// Get the modal
+let infoModal = document.getElementById('infoModal')
+
+// Get the button that opens the modal
+let infoBtn = document.getElementById('infoBtn')
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName('close')[0]
 
 // When the user clicks the button, open the modal
-btn.onclick = function () {
-    modal.style.display = 'block'
+infoBtn.onclick = function () {
+    // modal.style.display = 'block'
+    //   setTimeout((modal.style.display = 'block'), 3000)
+    infoModal.style.display = 'block'
+    //   setTimeout(() => {
+    //     modal.style.display = 'none'
+    //   }, 1500)
+}
+
+loginBtn.onclick = function () {
+    loginModal.style.display = 'block'
+    setTimeout(() => {
+        loginModal.style.display = 'none'
+        window.location.href = 'https://www.froekjaer.eu/dytbaat/kalender.html'
+    }, 1500)
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-    modal.style.display = 'none'
+    infoModal.style.display = 'none'
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = 'none'
+    if (event.target == infoModal) {
+        infoModal.style.display = 'none'
     }
 }
+
+// log-in
 
 //#endregion Modal
 
