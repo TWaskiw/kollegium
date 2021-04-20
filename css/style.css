@@ -97,11 +97,11 @@ body {
   color: #71d687;
 }
 
-#nav-toggle:checked+#menu {
+#nav-toggle:checked + #menu {
   transform: scale(1, 1);
 }
 
-#nav-toggle:checked~#menu a {
+#nav-toggle:checked ~ #menu a {
   opacity: 1;
   transition: opacity 0.25s ease-in-out 0.35s;
 }
@@ -141,6 +141,7 @@ body {
   width: 25%;
   padding: 16px 0;
   text-align: center;
+  border-radius: 5px;
 }
 
 .bottommenus a {
@@ -197,25 +198,20 @@ body {
 }
 
 article {
-  border: 1px solid rgb(247, 247, 247);
+  border: 1px solid rgb(226, 226, 226);
   border-radius: 20px;
   margin: 2em 0;
   width: 90%;
   padding: 1em;
   overflow-wrap: break-word;
-  background: rgb(235, 235, 235);
 }
 
-article p {
+article p{
   color: black;
 }
 
-.articlename {
-  color: white;
-  font-weight: 400;
+article h1 {
   font-size: 24px;
-  text-align: center;
-  border-bottom: 1px solid green;
 }
 
 article li {
@@ -243,48 +239,6 @@ article button {
 
 article button:hover {
   background-color: #71d687;
-}
-
-.calender-wrap {
-  margin: 1em 1em 1em 0;
-  overflow-wrap: break-word;
-}
-
-.month {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2em;
-}
-
-.calender-content {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.calender-daily {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  border-radius: 5px;
-  background-color: white;
-  padding: 0.25em;
-  margin: 0.25em;
-  width: 30%;
-}
-
-.calender-daily h2 {
-  font-size: 50%;
-}
-
-.calender-p {
-  font-size: xx-large;
-  color: #4caf50;
-  margin: -0.25em;
-}
-
-.calender-p1 {
-  font-size: x-small;
 }
 
 /*--------- Madspild --------*/
@@ -588,14 +542,6 @@ tbody {
   font-weight: bolder;
 }
 
-.error-message button:hover {
-  background-color: #71d687;
-}
-
-.fa-chevron-left {
-  font-size: smaller;
-}
-
 article button:hover {
   background-color: #71d687;
 }
@@ -618,16 +564,6 @@ article button:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
-
-  .calender-daily {
-    width: 30%;
-  }
-
-  .calender-daily h2 {
-    font-size: 75%;
-  }
-
   .error-message img {
     margin-top: 2em;
   }
@@ -711,7 +647,8 @@ article button:hover {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+}
 
 /*--------- Det sker/kalender start --------*/
 .kwrapper {
@@ -736,9 +673,11 @@ article button:hover {
   right: 17px;
   height: 10em;
   top: 520px;
-  background-image: linear-gradient(to bottom,
-      rgba(232, 232, 232, 0),
-      rgba(232, 232, 232, 0.993));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(232, 232, 232, 0),
+    rgba(232, 232, 232, 0.993)
+  );
   z-index: 1;
 }
 
@@ -931,67 +870,73 @@ article button:hover {
 /*--------- Det sker/kalender slut --------*/
 
 /*------------Login/glemt password og popup start-------------*/
-.loginform {
-  max-width: 550px;
-  min-height: 700px;
-  height: auto;
+.login_formen {
+  height: 850px;
   border-radius: 15px;
-  margin: 20px;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
   padding: 2%;
   background-color: #c5c5c5;
+  margin-left: 20px;
+  width: 90%;
 }
 
 /* Form Container */
-form .con {
+
+.login_formen .con {
   display: flex;
   flex-direction: column;
-  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 
 .loginImg {
   display: block;
-  position: relative;
+  /*position: relative;*/
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
   height: 100px;
   width: 100px;
   border-radius: 50%;
   z-index: 90;
-  top: 10px;
+  margin-bottom: 20px;
 }
 
 .line {
   position: relative;
-  width: 80%;
+  margin-left: 0px;
+  width: 100%;
   top: 80px;
   z-index: 1;
-  left: 30px;
 }
+
 
 /*Brugernavn - Password og login-knap*/
 .field-set {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+  width: 70%;
 }
 
 .log-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #4ecc69;
   border-radius: 100px;
   border-style: none;
+  text-decoration: none;
   cursor: pointer;
   color: white;
   transition-duration: 0.5s;
   height: 40px;
-  width: 70%;
-  padding-left: 25px;
-  padding-right: 25px;
+  width: 100%;
+  /*padding-left: 25px;
+  padding-right: 25px;*/
   -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
   -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
   box-shadow: 0 0 20px rgb(167, 167, 167);
-  margin-left: 50px;
+  /*margin-left: 50px;*/
   margin-top: 10px;
   letter-spacing: 0.05em;
 }
@@ -1016,7 +961,7 @@ form .con {
 
 .login-first-visit h2,
 p {
-  color: #eee;
+  color: #000;
   letter-spacing: 1px;
   margin-right: 20px;
 }
@@ -1058,12 +1003,11 @@ p {
 /* inputs form  */
 input[class='form-input'] {
   height: 40px;
-  width: 70%;
-  margin-left: 50px;
+  width: 100%;
+  /*margin-left: 50px;*/
   margin-top: 10px;
   text-align: center;
   font-size: 12px;
-  font-family: 'Abel', sans-serif;
   color: #72685e;
   outline: none;
   border: none;
@@ -1072,71 +1016,62 @@ input[class='form-input'] {
 }
 
 .login-info {
-  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 40px 40px 40px;
 }
 
-.log-in {
-  margin-top: 20px;
+.container_knapper_login{
+  display: flex;
+  flex-direction: row;
 }
 
-/*-----Husk mig----*/
-.login_container {
-  /*background-color: red;*/
-  padding-left: 75px;
-  width: 100%;
-  font-size: 12px;
-  font-weight: 600;
+.checkbox_huskmig{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  font-size: 10px;
+
+}
+
+.glemt-pass_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  font-size: 10px;
 }
 
 input[type='checkbox'] {
-  /*Fjerner den irriterende ekstra checkbox!*/
-  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  margin-top: -2px;
+  margin-right: 10px;
 }
 
-.checkmark {
-  position: absolute;
-  top: 540px;
-  left: 80px;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 10px;
-
+/*Forgot Password button*/
+.glemt-pass {
+  text-decoration: none;
+  color: #000;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  margin-top: 0px;
+  /*top: 545px;
+  left: 200px;*/
 }
 
-/* On mouse-over, add a grey background color */
-/*.login_container:hover input ~ .checkmark {
-  background-color: rgb(172, 20, 20);
-}*/
-
-/* When the checkbox is checked, add a blue background 
-.login_container input:checked ~ .checkmark {
-  background-color: #21f321;
-}*/
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: '';
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.login_container input:checked~.checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.login_container .checkmark:after {
-  left: 7px;
-  top: 0px;
-  width: 10px;
-  height: 20px;
-  border: solid #4ecc69;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.hr_glemt {
+  margin-left: 0px;
+  width: 100%;
 }
 
 /*Forgot Password button*/
@@ -1180,26 +1115,17 @@ input[id='email-input'] {
 
 /* The Modal (background) */
 .info_modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 777;
-  /* Sit on top */
-  padding-top: 250px;
-  /* Location of the box */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 777; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100vw;
-  /* Full width */
-  height: 100vh;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -1242,8 +1168,62 @@ input[id='email-input'] {
 }
 
 #infoBtn .fa-info-circle {
-  font-size: 6vw;
+  font-size: 25px;
+  color: #000;
+}
+/* #endregion Modal */
+
+
+/*------- Media Queries Login ---------*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+.overlay form{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.login_formen{
+  height: 600px;
+  margin: 20px;
+}
+
+.login_formen .con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.field-set{
+width: 40%;
+padding-right: 80px;
+}
+.login-info{
+  width: 40%;
+}
+
+
+.login_container {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  width: 80%;
+  font-size: 12px;
+  font-weight: 600;
   color: #000;
 }
 
-/* #endregion Modal */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

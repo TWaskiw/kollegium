@@ -15,7 +15,7 @@
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBZLIzZQsko8AJ23VWLHPIy6k3vMvhReqU">
         </script>
     <title>Åpark Kollegiet | Login</title>
-    <link rel="icon" type="image/png" href="img/aaparkkollegiet.png"/>
+    <link rel="icon" type="image/png" href="img/aaparkkollegiet.png" />
 </head>
 
 <header id="main-header">
@@ -35,40 +35,40 @@
 </header>
 
 <div class="overlay">
-    <form class="loginform">
+    <form class="login_formen">
         <!--con = Container  for items in the form-->
         <div class="con">
-            <hr class="line">
-            <img class="loginImg" src="/img/woman-login.png" alt="Smiling woman with glasses, standing in a field">
-            <div class="field-set">
 
+            <div class="field-set">
+                <hr class="line">
+                <img class="loginImg" src="/img/woman-login.png" alt="Smiling woman with glasses, standing in a field">
                 <!--User name Input-->
                 <input class="form-input" id="txt-input" type="text" placeholder="dinmail@mail.dk">
 
                 <input class="form-input" type="password" placeholder="Skriv dit kodeord her" id="pwd" name="#">
-                <button class="log-in">Log ind</button><br>
+                <a href="#" class="log-in">Log ind</a><br>
 
-                <label class="login_container">
-                    <input type="checkbox">Husk mig
-                    <span class="checkmark"></span>
-                </label>
+                <label class="login_container"></label>
 
-
-                <!--      Forgot Password button-->
-                <button class="glemt-pass" id="myBtn">Glemt kodeord?</button>
+                <div class="container_knapper_login">
+                    <div class="checkbox_huskmig"><input type="checkbox">Husk mig
+                        <span class="checkmark"></span>
+                    </div>
+                    <a class="glemt-pass" id="myBtn"></a>
+                    <div class="glemt-pass_box">Glemt kodeord?</div></a>
+                </div>
+                <hr class="hr_glemt">
             </div>
 
-            <!--   other buttons -->
+            <!-- other buttons -->
             <div class="login-info">
-
-                <hr class="hr_glemt">
-                <!--      End Other the Division -->
 
                 <div class="login-first-visit">
                     <h2>Er dette dit første besøg?</h2>
                     <p>Som beboer på Åpark kollegie har du adgang til en fælleskalender.<br>I kalenderen vil du finde en
                         lang række arrangementer og events for alle beboere - men før du kan logge ind, skal vi give dig
                         adgang.<br><br>Indtast din e-mail herunder for at modtage dit Kodeord</p>
+
                     <input class="form-input" id="email-input" type="text" placeholder="@E-mail">
 
                     <a id="infoBtn" href='#'><i class="fa fa-info-circle"></i></a>
@@ -76,8 +76,6 @@
                     <button class="glemtmail">Send</button>
                 </div>
             </div>
-
-            <!--   End Conrainer  -->
         </div>
 
         <!-- End Form -->
