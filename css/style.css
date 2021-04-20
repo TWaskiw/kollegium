@@ -97,11 +97,11 @@ body {
   color: #71d687;
 }
 
-#nav-toggle:checked + #menu {
+#nav-toggle:checked+#menu {
   transform: scale(1, 1);
 }
 
-#nav-toggle:checked ~ #menu a {
+#nav-toggle:checked~#menu a {
   opacity: 1;
   transition: opacity 0.25s ease-in-out 0.35s;
 }
@@ -141,7 +141,6 @@ body {
   width: 25%;
   padding: 16px 0;
   text-align: center;
-  border-radius: 5px;
 }
 
 .bottommenus a {
@@ -198,20 +197,25 @@ body {
 }
 
 article {
-  border: 1px solid rgb(226, 226, 226);
+  border: 1px solid rgb(247, 247, 247);
   border-radius: 20px;
   margin: 2em 0;
   width: 90%;
   padding: 1em;
   overflow-wrap: break-word;
+  background: rgb(235, 235, 235);
 }
 
-article p{
+article p {
   color: black;
 }
 
-article h1 {
+.articlename {
+  color: white;
+  font-weight: 400;
   font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid green;
 }
 
 article li {
@@ -239,6 +243,48 @@ article button {
 
 article button:hover {
   background-color: #71d687;
+}
+
+.calender-wrap {
+  margin: 1em 1em 1em 0;
+  overflow-wrap: break-word;
+}
+
+.month {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.calender-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.calender-daily {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0.25em;
+  margin: 0.25em;
+  width: 30%;
+}
+
+.calender-daily h2 {
+  font-size: 50%;
+}
+
+.calender-p {
+  font-size: xx-large;
+  color: #4caf50;
+  margin: -0.25em;
+}
+
+.calender-p1 {
+  font-size: x-small;
 }
 
 /*--------- Madspild --------*/
@@ -564,6 +610,16 @@ article button:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
+
+  .calender-daily {
+    width: 30%;
+  }
+
+  .calender-daily h2 {
+    font-size: 75%;
+  }
+
   .error-message img {
     margin-top: 2em;
   }
@@ -647,8 +703,7 @@ article button:hover {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}
 
 /*--------- Det sker/kalender start --------*/
 .kwrapper {
@@ -673,11 +728,9 @@ article button:hover {
   right: 17px;
   height: 10em;
   top: 520px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(232, 232, 232, 0),
-    rgba(232, 232, 232, 0.993)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(232, 232, 232, 0),
+      rgba(232, 232, 232, 0.993));
   z-index: 1;
 }
 
@@ -908,6 +961,7 @@ form .con {
   z-index: 1;
   left: 30px;
 }
+
 /*Brugernavn - Password og login-knap*/
 .field-set {
   display: flex;
@@ -1039,7 +1093,7 @@ input[type='checkbox'] {
   width: 25px;
   background-color: #eee;
   border-radius: 10px;
-  
+
 }
 
 /* On mouse-over, add a grey background color */
@@ -1060,7 +1114,7 @@ input[type='checkbox'] {
 }
 
 /* Show the checkmark when checked */
-.login_container input:checked ~ .checkmark:after {
+.login_container input:checked~.checkmark:after {
   display: block;
 }
 
@@ -1118,17 +1172,26 @@ input[id='email-input'] {
 
 /* The Modal (background) */
 .info_modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 777; /* Sit on top */
-  padding-top: 250px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 777;
+  /* Sit on top */
+  padding-top: 250px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100vw;
+  /* Full width */
+  height: 100vh;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 /* Modal Content */
