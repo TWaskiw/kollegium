@@ -8,7 +8,7 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", urll);
 
 xhr.setRequestHeader("Authorization", "Bearer 43a92462-6aa7-4d98-8c48-402348293f73");
-let produkter = [];
+
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
         let obj = JSON.parse(xhr.responseText);
@@ -19,6 +19,7 @@ xhr.onreadystatechange = function () {
         let butik;
         let vare;
         let butikker = []; //Er et array for alle butikker
+        let produkter = [];
 
         //Variable (for) er loopet
         let i;
