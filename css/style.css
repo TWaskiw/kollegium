@@ -199,30 +199,61 @@ body {
   justify-content: space-around;
 }
 
-.content h1 {
+.h2-month {
   color: black !important;
 }
 
 article {
   border: 1px solid rgb(247, 247, 247);
   border-radius: 20px;
-  margin: 2em 0;
   width: 90%;
-  padding: 1em;
   overflow-wrap: break-word;
   background: rgb(235, 235, 235);
+  margin: 2em;
 }
 
 article p {
   color: black;
 }
 
+.h1artikel {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 5em;
+}
+
+.kalenderh1 {
+  background-image: linear-gradient(rgba(66, 66, 66, 0.5), rgba(66, 66, 66, 0.5)), url('../img/basketballbillede.jpg');
+}
+
+.nyhederh1 {
+  background-image: linear-gradient(rgba(66, 66, 66, 0.5), rgba(66, 66, 66, 0.5)), url('../img/kollegienyheder.jpg');
+}
+
+.madspildh1 {
+  background-image: linear-gradient(rgba(66, 66, 66, 0.5), rgba(66, 66, 66, 0.5)), url('../img/madspil.jpg');
+}
+
+.linjeh1 {
+border: 1px solid #4ecc69;
+border-radius: 50px;
+position: relative;
+display: block;
+margin: 0 auto;
+width: 80%;
+z-index: 1;
+}
+
 .articlename {
-  color: black !important;
+  color: white !important;
   font-weight: 400;
   font-size: 24px;
   text-align: center;
-  border-bottom: 1px solid green;
+  padding-top: 20px;
 }
 
 article li {
@@ -244,7 +275,8 @@ article button {
   -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
   box-shadow: 0 0 20px rgb(167, 167, 167);
   display: block;
-  margin: 2em auto auto auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
   font-family: 'Poppins';
 }
 
@@ -260,6 +292,8 @@ article button a {
 .calender-wrap {
   margin-top: 1em;
   overflow-wrap: break-word;
+  margin: 2em 0;
+  padding: 1em;
 }
 
 .month {
@@ -314,11 +348,8 @@ article a {
 }
 
 .madspild h1 {
-  /* letter-spacing: 2px; */
   width: 100%;
   text-align: center;
-  /*  font-size: 2vh; */
-  /* font-weight: bold; */
   color: white;
   z-index: 1;
 }
@@ -1451,6 +1482,9 @@ input[class='form-input_nulstilling'] {
     display: none;
   }
 
+  #navsearchikon {
+    display: none;
+  }
   /* ------------- Modal ------------- */
   .overlay form {
     width: 90%;
