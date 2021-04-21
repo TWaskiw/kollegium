@@ -179,7 +179,7 @@ loginBtn.onclick = function () {
     loginModal.style.display = 'block'
     setTimeout(() => {
         loginModal.style.display = 'none'
-        window.location.href = 'https://www.froekjaer.eu/dytbaat/kalender.html'
+        window.location.href = 'https://www.froekjaer.eu/aapark/kalender.html'
     }, 1500)
 }
 
