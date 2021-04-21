@@ -722,6 +722,7 @@ article button:hover {
 
 .sammen p {
   color: rgb(20, 20, 20);
+  letter-spacing: normal !important;
 }
 
 .tekst,
