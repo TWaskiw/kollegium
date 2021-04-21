@@ -578,6 +578,7 @@ tbody {
   border-bottom: 2px black solid;
   overflow-y: scroll;
 }
+
 /*--------- Nyheder --------*/
 .nysti {
   width: 100%;
@@ -746,6 +747,34 @@ article button:hover {
   opacity: 0 !important;
   display: none !important;
 }
+
+  /*Kalendersiden + footer <990px */
+  @media (max-width: 990px) {
+    .kwrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .tekst,
+    .sammen {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .kalender {
+      width: 100%;
+    }
+
+    .stor {
+      order: 2;
+    }
+
+    .kalender tekst {
+      order: 1;
+    }
+
+  }
 
 .default-button {
   z-index: 999;
@@ -1596,35 +1625,6 @@ input[class='form-input_nulstilling'] {
     margin-top: 20px;
     width: 60%;
     position: absolute;
-  }
-
-  /* Kalendersiden + footer <990px */
-  @media (max-width: 992px) {
-    .kwrapper {
-      flex-wrap: nowrap;
-    }
-
-    .tekst,
-    .sammen {
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-
-    .kalender {
-      width: 100%;
-    }
-
-    .kalender stor {
-      order: 3;
-    }
-
-    .kalender tekst {
-      order: 1;
-    }
-
-    .kalender sammen {
-      order: 2;
-    }
   }
 
   /* Kalendersiden <600px */
