@@ -112,6 +112,7 @@ body {
   bottom: 0;
   width: 100%;
   flex-direction: row;
+  z-index: 999;
 }
 
 .bottomnav ul {
