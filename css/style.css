@@ -876,6 +876,11 @@ article button:hover {
   outline: none;
 }
 
+#loginBtn1 {
+  text-decoration: none;
+  outline: none;
+}
+
 .glemtmail {
   display: flex;
   align-items: center;
@@ -1319,21 +1324,22 @@ input[class='form-input_nulstilling'] {
 
 /* Media query - virker kun heroppe af en grund? */
 @media (max-width: 992px) {
-.footercontainer p {
-  bottom: 80px;
-  font-size: 10px;
+  .footercontainer p {
+    bottom: 80px;
+    font-size: 10px;
+  }
+
+  .footercontainer {
+    height: 30vh;
+    overflow: hidden;
+  }
+
+  .footercontainer img {
+    max-width: 25%;
+    max-height: 25%;
+  }
 }
 
-.footercontainer {
-  height: 30vh;
-  overflow: hidden;
-}
-
-.footercontainer img {
-  max-width: 25%;
-  max-height: 25%;
-}
-}
 /*--------- Media Queries --------*/
 /* Små devices - 576px og op */
 @media (min-width: 576px) {
@@ -1528,42 +1534,42 @@ input[class='form-input_nulstilling'] {
     margin-top: 20px;
     width: 60%;
     position: absolute;
-}
-
-/* Kalendersiden + footer <990px */
-@media (max-width: 992px) {
-  .kwrapper {
-    flex-wrap: nowrap;
   }
 
-  .tekst,
-  .sammen {
-    margin-left: 15px;
-    margin-right: 15px;
+  /* Kalendersiden + footer <990px */
+  @media (max-width: 992px) {
+    .kwrapper {
+      flex-wrap: nowrap;
+    }
+
+    .tekst,
+    .sammen {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .kalender {
+      width: 100%;
+    }
+
+    .kalender stor {
+      order: 3;
+    }
+
+    .kalender tekst {
+      order: 1;
+    }
+
+    .kalender sammen {
+      order: 2;
+    }
   }
 
-  .kalender {
-    width: 100%;
+  /* Kalendersiden <600px */
+  @media only screen and (max-width: 600px) {
+    .form-group input {
+      width: 100%;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
   }
-
-  .kalender stor {
-    order: 3;
-  }
-
-  .kalender tekst {
-    order: 1;
-  }
-
-  .kalender sammen {
-    order: 2;
-  }
-}
-
-/* Kalendersiden <600px */
-@media only screen and (max-width: 600px) {
-  .form-group input {
-    width: 100%;
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}

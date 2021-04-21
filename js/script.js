@@ -7,7 +7,7 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", urll);
 
 xhr.setRequestHeader("Authorization", "Bearer 43a92462-6aa7-4d98-8c48-402348293f73");
-let produkter = []
+let produkter = [];
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
         let obj = JSON.parse(xhr.responseText);
@@ -15,9 +15,9 @@ xhr.onreadystatechange = function () {
         //console.log(obj);
 
         //Her defineres variablerne til senere brug
-        let butik
-        let vare
-        let butikker = [] //Er et array for alle butikker
+        let butik;
+        let vare;
+        let butikker = []; //Er et array for alle butikker
 
         //Variable (for) er loopet
         let i;
@@ -30,10 +30,10 @@ xhr.onreadystatechange = function () {
                 obj[i].store.hours[0].close, // Lukketid i dag
                 obj[i].store.hours[0].open // Åbningstid i dag
             ];
-            butikker[i] = butik //Her hældes hver enkelt butiks data ind i "butikker arryet"
+            butikker[i] = butik; //Her hældes hver enkelt butiks data ind i "butikker arryet"
             for (a = 0; a < obj[i].clearances.length; a++) { // Loop gennem varene
                 vare = [
-                    i,//ID på butikken
+                    i, //ID på butikken
                     obj[i].clearances[a].product.description, // Beskrivelse
                     obj[i].clearances[a].product.image, // Billede
                     obj[i].clearances[a].offer.originalPrice, // Førpris
@@ -41,22 +41,22 @@ xhr.onreadystatechange = function () {
                     obj[i].clearances[a].offer.percentDiscount, // Besparelse i %
                     obj[i].clearances[a].offer.discount, // Besparelse i KR
                     obj[i].clearances[a].offer.stock, // Antal på lager
-                ]
+                ];
 
                 produkter.push(vare);
             }
 
             if (a != '0') { //Viser kun butikken hvis den har tilbudsvarer
-                loadButikData(i, butik[1], butik[2], '(Åben mellem ' + formatTime(butik[4]) + ' og ' + formatTime(butik[3]) + ')')
+                loadButikData(i, butik[1], butik[2], '(Åben mellem ' + formatTime(butik[4]) + ' og ' + formatTime(butik[3]) + ')');
             }
 
 
-        }//Denne kalder funktionen fra linje 70 og viser butikkens varer
+        } //Denne kalder funktionen fra linje 70 og viser butikkens varer
         const linkButik = document.querySelectorAll(".celle2");
         for (const link of linkButik) {
             link.addEventListener('click', function () {
-                visVarer(this.id)
-                document.getElementById('varer').style.height = '500px'
+                visVarer(this.id);
+                document.getElementById('varer').style.height = '500px';
 
             })
         }
@@ -154,6 +154,9 @@ let loginModal = document.getElementById('loginModal')
 // Get the button that opens the modal
 let loginBtn = document.getElementById('loginBtn')
 
+// Get the button that opens the modal
+let loginBtn1 = document.getElementById('loginBtn1')
+
 // Get the modal
 let infoModal = document.getElementById('infoModal')
 
@@ -214,4 +217,3 @@ $(document).ready(function () {
         var near_place = autocomplete.getPlace();
     });
 });
-

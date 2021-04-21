@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -10,84 +10,86 @@
     <link rel="icon" type="image/png" href="img/aaparkkollegiet.png" />
 </head>
 
-<!-- Navigation -->
-<header id="main-header">
-    <div class="navcontainer">
-        <a href="index.html" class="logo"><img src="img/Logo.png" alt="Navigation logo" width="150"></a>
-        <!-- Menupunkter -->
-        <nav id="menu">
-            <ul>
-                <li><a href="404.html">Bolig</a></li>
-                <li><a href="#">Det sker</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Varmemester</a></li>
-                <li class="fas fa-search nav-search"></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<body>
+    <!-- Navigation -->
+    <header id="main-header">
+        <div class="navcontainer">
+            <a href="index.html" class="logo"><img src="img/Logo.png" alt="Navigation logo" width="150"></a>
+            <!-- Menupunkter -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="404.html">Bolig</a></li>
+                    <li><a href="#">Det sker</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Varmemester</a></li>
+                    <li class="fas fa-search nav-search"></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- Indhold -->
-<div class="overlay_nulstilling">
-    <form class="login_formen_nulstilling">
-        <!--con = Container  for items in the form-->
-        <div class="con_nulstilling">
-            <div class="field-set_nulstilling">
+    <!-- Indhold -->
+    <div class="overlay_nulstilling">
+        <form class="login_formen_nulstilling">
+            <!--con = Container  for items in the form-->
+            <div class="con_nulstilling">
+                <div class="field-set_nulstilling">
 
-                <div class="tilbage_knappen">
-                    <a href="login.html" class="previous">&lt;</a>
-                    <p class="tilbage_knap">Tilbage</p>
+                    <div class="tilbage_knappen">
+                        <a href="login.html" class="previous">&lt;</a>
+                        <p class="tilbage_knap">Tilbage</p>
+                    </div>
+
+                    <hr class="line_nulstilling">
+                    <img class="loginImg_nulstilling" src="img/woman-login.png"
+                        alt="Smiling woman with glasses, standing in a field">
+                    <div class="login-first-visit_nulstilling">
+                        <h2>Er dette dit første besøg?</h2>
+                        <p>Som beboer på Åpark kollegie har du adgang til en fælleskalender.<br>I kalenderen vil du
+                            finde en
+                            lang række arrangementer og events for alle beboere - men før du kan logge ind, skal vi give
+                            dig
+                            adgang.<br><br>Indtast din e-mail herunder for at modtage dit Kodeord
+                        </p>
+                    </div>
+                    <!--email input-->
+                    <input class="form-input_nulstilling" id="txt-input" type="text" placeholder="dinmail@mail.dk">
+                    <button class="nulstilling_mail">Send</button>
+                    <hr class="hr_glemt_streg">
                 </div>
 
-                <hr class="line_nulstilling">
-                <img class="loginImg_nulstilling" src="img/woman-login.png"
-                    alt="Smiling woman with glasses, standing in a field">
-                <div class="login-first-visit_nulstilling">
-                    <h2>Er dette dit første besøg?</h2>
-                    <p>Som beboer på Åpark kollegie har du adgang til en fælleskalender.<br>I kalenderen vil du finde en
-                        lang række arrangementer og events for alle beboere - men før du kan logge ind, skal vi give dig
-                        adgang.<br><br>Indtast din e-mail herunder for at modtage dit Kodeord
-                    </p>
-                </div>
-                <!--email input-->
-                <input class="form-input_nulstilling" id="txt-input" type="text" placeholder="dinmail@mail.dk">
-                <button class="nulstilling_mail">Send</button>
-                <hr class="hr_glemt_streg">
             </div>
-
-        </div>
-    </form>
-</div>
-
-<!-- End Form -->
-</form>
-
-</div>
-<!-- Footer -->
-<footer>
-    <div class="footercontainer">
-        <a href="#forsidesec"><img src="img/Logo.png" alt="Footer Åpark Kollegiet logo"></a>
-        <p><i class="fas fa-map-pin fa-lg"></i> Åpark Kollegiet, Åparken 1, 3, 5 & 7, 8000 Aarhus C</p>
+        </form>
     </div>
-</footer>
 
-<!-- Bottom/mobil nav -->
-<nav class="bottomnav">
-    <div class="bottomnavcont">
-        <div class="bottommenus border">
-            <div><a href="404.html"><i class="far fa-building fa-lg"></i>Bolig</a></div>
+    <!-- Footer -->
+    <footer>
+        <div class="footercontainer">
+            <a href="#forsidesec"><img src="img/Logo.png" alt="Footer Åpark Kollegiet logo"></a>
+            <p><i class="fas fa-map-pin fa-lg"></i> Åpark Kollegiet, Åparken 1, 3, 5 & 7, 8000 Aarhus C</p>
         </div>
-        <div class="bottommenus active">
-            <div><a href="#"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></div>
+    </footer>
+
+    <!-- Bottom/mobil nav -->
+    <nav class="bottomnav">
+        <div class="bottomnavcont">
+            <div class="bottommenus border">
+                <div><a href="404.html"><i class="far fa-building fa-lg"></i>Bolig</a></div>
+            </div>
+            <div class="bottommenus active">
+                <div><a href="#"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></div>
+            </div>
+            <div class="bottommenus border">
+                <div><a href="404.html"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></div>
+            </div>
+            <div class="bottommenus border">
+                <div><a href="404.html"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></div>
+            </div>
         </div>
-        <div class="bottommenus border">
-            <div><a href="404.html"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></div>
-        </div>
-        <div class="bottommenus border">
-            <div><a href="404.html"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></div>
-        </div>
-    </div>
-</nav>
-<!-- Scripts -->
-<script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
+    </nav>
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
