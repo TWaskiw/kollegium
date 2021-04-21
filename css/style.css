@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: fff;
+  background-color: #fff;
   font-family: 'Poppins';
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 #main-header {
-  background: #fff;
+  background: #ffffff;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -51,7 +51,7 @@ body {
   cursor: pointer;
 }
 
-/* Menu */
+/* Menupunkter */
 #menu {
   position: absolute;
   text-align: right;
@@ -106,7 +106,7 @@ body {
   transition: opacity 0.25s ease-in-out 0.35s;
 }
 
-/* Bottom navgiation */
+/* Bottom navigation */
 .bottomnav {
   position: fixed;
   bottom: 0;
@@ -115,8 +115,9 @@ body {
   z-index: 999;
 }
 
-.bottomnav ul {
+.bottomnavcont {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   padding: 0;
   margin: 0;
@@ -173,8 +174,6 @@ body {
 }
 
 /*--------- Forside --------*/
-
-/*--------- Forside --------*/
 .forsidecontent {
   width: 100%;
   padding-top: 130px;
@@ -201,7 +200,7 @@ body {
   justify-content: space-around;
 }
 
-.content h1 { 
+.content h1 {
   color: black !important;
 }
 
@@ -304,16 +303,13 @@ article button a {
 
 /*--------- Madspild --------*/
 .madspild {
-  /*margin: 20px;*/
   padding-left: 10px;
-  /* padding-top: 20px; */
-  background-color: fff;
+  background-color: #fff;
   border-radius: 20px;
   width: 100%;
 }
 
 .madspild h1 {
-  /*border-bottom: #000000 solid 2px;*/
   letter-spacing: 2px;
   width: 100%;
   text-align: center;
@@ -321,16 +317,7 @@ article button a {
   font-weight: bold;
   color: white;
   z-index: 1;
-} 
-
-/* .bgAPI {
-  background-image: url(img/baggrund_API.jpeg);
-  background-repeat: no-repeat;
-  position: relative;
-  width: 100%;
-  height: 130px;
-  color: white;
-} */
+}
 
 .textAPI h1 {
   padding-top: 40px;
@@ -380,7 +367,6 @@ article button a {
   display: block;
   text-align: left;
   font-size: 0.8rem;
-  /* color: #000000; */
   background-color: #707e73;
   width: 100%;
 }
@@ -407,7 +393,6 @@ tbody {
 
 #varer td,
 #varer th {
-  /* border-bottom: 1px solid #ddd; */
   padding: 8px;
   height: 50px;
   text-align: left;
@@ -440,12 +425,10 @@ tbody {
 
 .celle2 {
   margin-bottom: 7px;
-  /*margin-bottom: 15px; */
   border: 5px solid #707e73;
   border-radius: 15px;
   padding: 10px;
   background-color: #707e73;
-  /*width: 18vw;*/
   height: auto;
   cursor: pointer;
   transition: all 0.6s;
@@ -472,7 +455,6 @@ tbody {
   padding-left: 5px;
   width: 90px;
   height: auto;
-  /* height: 100px; */
   border-radius: 5px;
 }
 
@@ -489,8 +471,6 @@ tbody {
 .tpris {
   display: flex;
   max-height: 100%;
-
-  /* justify-content: space-around; */
 }
 
 .tpris p {
@@ -498,11 +478,9 @@ tbody {
   margin-left: 10px;
   font-size: 1.2rem;
   width: 100px;
-  /*margin-top: auto;*/
 }
 
 .tpris p span {
-  /* margin-left: 10px; */
   font-size: 2rem;
 }
 
@@ -558,9 +536,7 @@ tbody {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*margin-left: 20px;*/
   margin-right: 20px;
-  /* align-items: flex-start; */
   width: 90%;
   height: 250px;
   border-bottom: 2px black solid;
@@ -625,23 +601,755 @@ article button:hover {
   background-color: #71d687;
 }
 
-/*--------- Media Queries --------*/
+/*--------- Det sker/kalender --------*/
+.kwrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
 
-/* Small devices (landscape phones, 576px and up) */
+.storwrapper {
+  padding-top: 130px;
+}
+
+.storwrapper:after {
+  content: ' ';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 17px;
+  height: 10em;
+  top: 520px;
+  background-image: linear-gradient(to bottom,
+      rgba(232, 232, 232, 0),
+      rgba(232, 232, 232, 0.993));
+  z-index: 1;
+}
+
+/* Scrollbar */
+.kwrapper::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.kwrapper::-webkit-scrollbar:vertical {
+  width: 20px;
+}
+
+.kwrapper::-webkit-scrollbar:horizontal {
+  height: 20px;
+}
+
+.kwrapper::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid #e8e8e8;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Tekst + knap */
+.kalender {
+  padding: 20px;
+}
+
+.sammen ul {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.sammen p {
+  color: rgb(20, 20, 20);
+}
+
+.tekst,
+.sammen {
+  width: 25%;
+  margin-left: 30px;
+  line-height: 22px;
+}
+
+.stor {
+  flex-basis: 100%;
+  width: 60%;
+}
+
+.kwrapper h2,
+.container h3 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.kwrapper img,
+.kwrapper a {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  display: none !important;
+}
+
+.default-button {
+  z-index: 999;
+  background-color: #4ecc69;
+  border-radius: 100px;
+  border-style: none;
+  cursor: pointer;
+  color: white;
+  transition-duration: 0.5s;
+  height: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
+  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
+  box-shadow: 0 0 20px rgb(167, 167, 167);
+  text-decoration: none;
+}
+
+.default-button:hover {
+  z-index: 999;
+  background-color: #71d687;
+}
+
+.default-button a {
+  text-decoration: none;
+}
+
+.sammen form {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Søg efter adresse */
+#search_input {
+  font-size: 18px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-family: 'Poppins' !important;
+  margin-right: 30px !important;
+  margin-left: 30px !important;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 60%;
+  padding: 0.375rem 0.75rem;
+  padding-left: 17px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-family: Arial, FontAwesome;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  border-radius: 20px !important;
+}
+
+.form-group input:focus {
+  color: #495057;
+  background-color: #ffffff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.container {
+  margin-top: 30px !important;
+}
+
+/* Google Maps Iframe */
+.mapsframe {
+  width: 100%;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 40px;
+}
+
+.mapsframe iframe {
+  width: 100%;
+  border-radius: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 2px white;
+}
+
+.col-lg-12 {
+  text-align: center;
+}
+
+/*------------Login/glemt password og popup start-------------*/
+.login_formen {
+  height: 850px;
+  border-radius: 15px;
+  padding: 2%;
+  background-color: rgb(235, 235, 235);
+  margin-left: 20px;
+  width: 90%;
+}
+
+/* Form Container */
+.login_formen .con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  z-index: 90;
+  margin-bottom: 20px;
+  border: 1px solid #4ecc69;
+}
+
+.line {
+  border: 1px solid #4ecc69;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+  top: 80px;
+  z-index: 1;
+}
+
+.hr_glemt {
+  border: 1px solid #4ecc69;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+  top: 20px;
+}
+
+/* Brugernavn - Password og login-knap */
+.field-set {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+}
+
+.log-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4ecc69;
+  border-radius: 100px;
+  border-style: none;
+  cursor: pointer;
+  color: white;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  height: 40px;
+  width: 100%;
+  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
+  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
+  box-shadow: 0 0 20px rgb(167, 167, 167);
+  margin-top: 10px;
+  letter-spacing: 0.05em;
+}
+
+.log-in:hover {
+  background-color: #71d687;
+  color: white;
+}
+
+#loginBtn {
+  text-decoration: none;
+  outline: none;
+}
+
+.glemtmail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4ecc69;
+  border-radius: 100px;
+  border-style: none;
+  cursor: pointer;
+  color: white;
+  transition-duration: 0.5s;
+  height: 40px;
+  width: 30%;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 10px;
+  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
+  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
+  box-shadow: 0 0 20px rgb(167, 167, 167);
+}
+
+.glemtmail:hover {
+  background-color: #71d687;
+  color: white;
+}
+
+.login-first-visit h2 {
+  color: #000;
+  margin-right: 20px;
+}
+
+.login-first-visit p {
+  font-size: 12px;
+  padding-top: 10px;
+  margin-right: 20px;
+  color: #000;
+}
+
+.login-first-visit h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.input-item {
+  background: #ffffff;
+  color: #333;
+  padding: 14.5px 0px 15px 9px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+
+/* Inputs form  */
+input[class='form-input'] {
+  height: 40px;
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 12px;
+  color: #72685e;
+  outline: none;
+  border: none;
+  border-radius: 35px;
+  letter-spacing: 1px;
+  border: #4ecc69 1px solid;
+}
+
+.login-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 40px 40px 40px;
+}
+
+.container_knapper_login {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox_huskmig {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  font-size: 12px;
+}
+
+.glemt-pass_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-decoration: none;
+}
+
+input[type='checkbox'] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  margin-top: -2px;
+  margin-right: 10px;
+}
+
+/* Glemt password button */
+.glemt-pass {
+  text-decoration: none;
+  color: #000;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+}
+
+.glemt {
+  margin-left: -20px;
+  width: 95%;
+  color: red;
+}
+
+.information {
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.overlay {
+  padding-top: 140px;
+  margin-bottom: 80px;
+}
+
+input[id='email-input'] {
+  margin-left: 0px;
+  width: 80%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+/* ------------- Modal ------------- */
+/* The Modal (baggrund) */
+.login_modal {
+  display: none;
+  position: fixed;
+  z-index: 777;
+  padding-top: 250px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.info_modal {
+  display: none;
+  position: fixed;
+  z-index: 777;
+  padding-top: 250px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal indhold */
+.modal-content {
+  background-color: #4ecc69;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 90%;
+  border: #000 1px solid;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+.modal-content-glemt {
+  background-color: rgb(235, 235, 235);
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 90%;
+  border: #000 1px solid;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+.modal-content p,
+.modal-content-glemt p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.modal-content p {
+  color: white;
+}
+
+.modal-content h2,
+.modal-content-glemt h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.modal-content h2 {
+  color: white;
+}
+
+/* Luk button */
+.close {
+  margin-top: -20px;
+  color: #4ecc69;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: right;
+  align-content: flex-end;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#infoBtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.fa-info-circle {
+  transition-duration: 0.5s;
+}
+
+.fa-info-circle:hover {
+  opacity: 0.5;
+}
+
+#infoBtn .fa-info-circle {
+  font-size: 2vh;
+  color: #000;
+}
+
+/*--------- Login:Nulstilling ---------*/
+.overlay_nulstilling {
+  padding-top: 150px;
+  margin-bottom: 30px;
+}
+
+.login_formen_nulstilling {
+  height: 620px;
+  border-radius: 15px;
+  padding: 2%;
+  background-color: rgb(235, 235, 235);
+  margin-left: 20px;
+  width: 90%;
+}
+
+.con_nulstilling .login_formen_nulstilling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field-set_nulstilling {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-left: 20px;
+}
+
+.tilbage_knappen {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 70%;
+  position: absolute;
+  text-decoration: none;
+}
+
+.previous {
+  background-color: #4ecc69;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.previous:hover {
+  background-color: #71d687;
+  color: white;
+}
+
+.tilbage_knappen a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.tilbage_knappen p {
+  padding-top: 5px;
+  padding-right: 0px;
+  line-height: 16px;
+  width: 50px;
+}
+
+.line_nulstilling {
+  border: 1px solid #4ecc69;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+  top: 80px;
+  z-index: 1;
+}
+
+.loginImg_nulstilling {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  z-index: 90;
+  margin-bottom: 20px;
+  border: 1px solid #4ecc69;
+}
+
+.login-first-visit_nulstilling h2,
+p {
+  color: #000;
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
+
+.login-first-visit_nulstilling p {
+  font-size: 12px;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.login-first-visit_nulstilling h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+input[class='form-input_nulstilling'] {
+  height: 40px;
+  width: 85%;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 12px;
+  color: #72685e;
+  outline: none;
+  border: none;
+  border-radius: 35px;
+  letter-spacing: 1px;
+  border: #4ecc69 1px solid;
+}
+
+.nulstilling_mail {
+  display: block;
+  background-color: #4ecc69;
+  border-radius: 100px;
+  border-style: none;
+  cursor: pointer;
+  color: white;
+  margin-top: 10px;
+  margin-left: 100px;
+  transition-duration: 0.5s;
+  height: 40px;
+  width: 30%;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 10px;
+  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
+  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
+  box-shadow: 0 0 20px rgb(167, 167, 167);
+}
+
+.nulstilling_mail:hover {
+  background-color: #71d687;
+}
+
+.hr_glemt_streg {
+  border: 1px solid #4ecc69;
+  border-radius: 50px;
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+  top: 0px;
+}
+
+/*-------Footer---------*/
+.footercontainer {
+  background-image: url('../img/wave.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 45vh;
+  position: relative;
+}
+
+.footercontainer img {
+  max-width: 33%;
+  max-height: 33%;
+}
+
+.footercontainer p {
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  text-align: right;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Media query - virker kun heroppe af en grund? */
+@media (max-width: 992px) {
+.footercontainer p {
+  bottom: 80px;
+  font-size: 10px;
+}
+
+.footercontainer {
+  height: 30vh;
+  overflow: hidden;
+}
+
+.footercontainer img {
+  max-width: 25%;
+  max-height: 25%;
+}
+}
+/*--------- Media Queries --------*/
+/* Små devices - 576px og op */
 @media (min-width: 576px) {
   #menu {
     display: none;
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Tablets - 768px og op */
 @media (min-width: 768px) {
   article {
     width: 75%;
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Laptops, desktop osv. 992px og op */
 @media (min-width: 992px) {
   .calender-daily {
     width: 30%;
@@ -732,85 +1440,98 @@ article button:hover {
   .bottomnav {
     display: none;
   }
+
+  /* ------------- Modal ------------- */
+  .overlay form {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+
+  .login_formen {
+    height: 650px;
+    margin: 20px;
+  }
+
+  .login_formen .con {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .field-set {
+    width: 30%;
+    height: 100%;
+  }
+
+  .login-info {
+    width: 40%;
+    padding-left: 180px;
+    height: 100%;
+    padding-top: 80px;
+  }
+
+  .vertikal {
+    position: absolute;
+    border: #4ecc69 solid 1px;
+    width: 30vh;
+    transform: rotate(90deg);
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+
+  .modal-content-glemt {
+    width: 35%;
+  }
+
+  .modal-content {
+    width: 35%;
+  }
+
+  /* ------------- Nulstilling ------------- */
+  .overlay_nulstilling {
+    padding-top: 150px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .con_nulstilling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login_formen_nulstilling {
+    width: 90%;
+  }
+
+  .field-set_nulstilling {
+    width: 50%;
+  }
+
+  .nulstilling_mail {
+    margin-left: 150px;
+  }
+
+  .tilbage_knappen {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 60%;
+    position: absolute;
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
-
-/*--------- Det sker/kalender start --------*/
-.kwrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 500px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.storwrapper {
-  padding-top: 130px;
-}
-
-.storwrapper:after {
-  content: ' ';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 17px;
-  height: 10em;
-  top: 520px;
-  background-image: linear-gradient(to bottom,
-      rgba(232, 232, 232, 0),
-      rgba(232, 232, 232, 0.993));
-  z-index: 1;
-}
-
-.kwrapper::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
-.kwrapper::-webkit-scrollbar:vertical {
-  width: 20px;
-}
-
-.kwrapper::-webkit-scrollbar:horizontal {
-  height: 20px;
-}
-
-.kwrapper::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 2px solid #e8e8e8;
-  /*HUSK SAMME FARVE SOM BAGGRUND */
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.kalender {
-  padding: 20px;
-}
-
-.sammen ul {
-  margin-left: 30px;
-  margin-bottom: 15px;
-}
-
-.sammen p {
-  color: rgb(20, 20, 20);
-}
-
-.tekst,
-.sammen {
-  width: 25%;
-  margin-left: 30px;
-  line-height: 22px;
-}
-
-.stor {
-  flex-basis: 100%;
-  width: 60%;
-}
-
-@media (max-width: 990px) {
+/* Kalendersiden + footer <990px */
+@media (max-width: 992px) {
   .kwrapper {
     flex-wrap: nowrap;
   }
@@ -838,811 +1559,11 @@ article button:hover {
   }
 }
 
-.kwrapper h2,
-.container h3 {
-  text-align: center;
-  font-weight: bolder;
-}
-
-.kwrapper img,
-.kwrapper a {
-  visibility: hidden !important;
-  opacity: 0 !important;
-  display: none !important;
-}
-
-.default-button {
-  z-index: 999;
-  background-color: #4ecc69;
-  border-radius: 100px;
-  border-style: none;
-  cursor: pointer;
-  color: white;
-  transition-duration: 0.5s;
-  height: 40px;
-  padding-left: 25px;
-  padding-right: 25px;
-  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
-  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
-  box-shadow: 0 0 20px rgb(167, 167, 167);
-  text-decoration: none;
-}
-
-.default-button:hover {
-  z-index: 999;
-  background-color: #71d687;
-}
-
-.default-button a {
-  text-decoration: none;
-}
-
-.sammen form {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-#search_input {
-  font-size: 18px;
-}
-
-.form-group {
-  margin-bottom: 30px;
-  margin-top: 20px;
-  font-family: 'Poppins' !important;
-  margin-right: 30px !important;
-  margin-left: 30px !important;
-}
-
-.form-group label {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.form-group input {
-  width: 60%;
-  padding: 0.375rem 0.75rem;
-  padding-left: 17px;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  font-family: Arial, FontAwesome;
-  margin-right: auto !important;
-  margin-left: auto !important;
-  border-radius: 20px !important;
-}
-
+/* Kalendersiden <600px */
 @media only screen and (max-width: 600px) {
   .form-group input {
     width: 100%;
     margin-left: 40px;
     margin-right: 40px;
-  }
-}
-
-.form-group input:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.container {
-  margin-top: 30px !important;
-}
-
-.mapsframe {
-  width: 100%;
-  display: flex;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-bottom: 40px;
-}
-
-.mapsframe iframe {
-  width: 100%;
-  border-radius: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.col-lg-12 {
-  text-align: center;
-}
-
-/*--------- Det sker/kalender slut --------*/
-
-/*------------Login/glemt password og popup start-------------*/
-.login_formen {
-  height: 850px;
-  border-radius: 15px;
-  /*box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);*/
-  padding: 2%;
-  background-color: rgb(235,235,235);
-  margin-left: 20px;
-  width: 90%;
-}
-
-/* Form Container */
-
-.login_formen .con {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.loginImg {
-  display: block;
-  /*position: relative;*/
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  z-index: 90;
-  margin-bottom: 20px;
-  border: 1px solid #4ecc69;
-}
-
-.line{
-  border: 1px solid #4ecc69;
-  border-radius: 50px;
-  position: relative;
-  margin-left: 0px;
-  width: 100%;
-  top: 80px;
-  z-index: 1;
-}
-
-.hr_glemt{
-  border: 1px solid #4ecc69;
-  border-radius: 50px;
-  position: relative;
-  margin-left: 0px;
-  width: 100%;
-  top: 20px;
-}
-
-
-/*Brugernavn - Password og login-knap*/
-.field-set {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  text-align: center;
-}
-
-.log-in {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #4ecc69;
-  border-radius: 100px;
-  border-style: none;
-  cursor: pointer;
-  color: white;
-  transition-duration: 0.5s;
-  text-decoration: none;
-  height: 40px;
-  width: 100%;
-  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
-  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
-  box-shadow: 0 0 20px rgb(167, 167, 167);
-  margin-top: 10px;
-  letter-spacing: 0.05em;
-}
-
-.log-in:hover {
-  background-color: #71d687;
-  color: white;
-}
-
-#loginBtn {
-    text-decoration: none;
-    outline: none;
-}
-
-.glemtmail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #4ecc69;
-  border-radius: 100px;
-  border-style: none;
-  cursor: pointer;
-  color: white;
-  transition-duration: 0.5s;
-  height: 40px;
-  width: 30%;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 10px;
-  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
-  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
-  box-shadow: 0 0 20px rgb(167, 167, 167);
-}
-
-.glemtmail:hover {
-  background-color: #71d687;
-  color: white;
-}
-
-.login-first-visit h2 {
-  color: #000;
-  /* letter-spacing: 1px; */
-  margin-right: 20px;
-}
-
-.login-first-visit p {
-  font-size: 12px;
-  padding-top: 10px;
-  margin-right: 20px;
-  color: #000;
-}
-
-.login-first-visit h2 {
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-.input-item {
-  background: #fff;
-  color: #333;
-  padding: 14.5px 0px 15px 9px;
-  border-radius: 5px 0px 0px 5px;
-}
-
-
-/* inputs form  */
-input[class='form-input'] {
-  height: 40px;
-  width: 100%;
-  /*margin-left: 50px;*/
-  margin-top: 10px;
-  padding-left: 15px;
-  text-align: left;
-  font-size: 12px;
-  color: #72685e;
-  outline: none;
-  border: none;
-  border-radius: 35px;
-  letter-spacing: 1px;
-  border: #4ecc69 1px solid;
-}
-
-.login-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 40px 40px 40px;
-}
-
-.container_knapper_login {
-  display: flex;
-  flex-direction: row;
-}
-
-.checkbox_huskmig {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 50%;
-  font-size: 12px;
-}
-
-.glemt-pass_box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60%;
-  
-  text-decoration: none;
-}
-
-input[type='checkbox'] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 17px;
-  height: 17px;
-  margin-top: -2px;
-  margin-right: 10px;
-}
-
-/*Forgot Password button*/
-.glemt-pass {
-  text-decoration: none;
-  color: #000;
-  background: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-  font-size: 12px;
-  /*top: 545px;
-  left: 200px;*/
-}
-
-.glemt {
-  margin-left: -20px;
-  width: 95%;
-  color: red;
-}
-
-
-.information {
-  background: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.overlay {
-  padding-top: 140px;
-  margin-bottom: 80px;
-}
-
-input[id='email-input'] {
-  margin-left: 0px;
-  width: 80%;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-/* #region Modal */
-
-/* The Modal (background) */
-.login_modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 777; /* Sit on top */
-  padding-top: 250px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-.info_modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 777; /* Sit on top */
-  padding-top: 250px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #4ecc69;
-  margin: auto;
-  padding: 40px;
-  border: 1px solid #888;
-  width: 90%;
-  border: #000 1px solid;
-  border-radius: 30px;
-  width: fit-content;
-}
-
-.modal-content-glemt {
-  /* align-items: center; */
-  background-color: rgb(235, 235, 235);
-  margin: auto;
-  padding: 40px;
-  border: 1px solid #888;
-  width: 90%;
-  border: #000 1px solid;
-  border-radius: 30px;
-  width: fit-content;
-}
-
-.modal-content p,
-.modal-content-glemt p{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-}
-
-.modal-content p{
-  color: white;
-}
-
-.modal-content h2,
-.modal-content-glemt h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-}
-
-.modal-content h2{
-  color: white;
-}
-
-/* The Close Button */
-.close {
-  /* display: flex;
-  position: absolute; */
-  margin-top: -20px;
-  color: #4ecc69;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  justify-content: right;
-  align-content: flex-end;
-  /* align-content: flex-end; */
-  /* z-index: 40; */
-  /* text-align: right; */
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-#infoBtn {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.fa-info-circle {
-  transition-duration: 0.5s;
-}
-
-.fa-info-circle:hover {
-  opacity: 0.5;
-}
-
-#infoBtn .fa-info-circle {
-  font-size: 2vh;
-  color: #000;
-}
-
-/* #endregion Modal */
-
-
-/*------- Media Queries Login ---------*/
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-  .overlay form {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 50px;
-  }
-
-  .login_formen {
-    height: 650px;
-    margin: 20px;
-  }
-
-  .login_formen .con {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .field-set {
-    width: 30%;
-    height: 100%;
-    
-  }
-
-  .login-info {
-    width: 40%;
-    padding-left:180px;
-    height: 100%;
-    padding-top: 80px;
-  }
-
-
-.vertikal{
-  position: absolute;
-  border: #4ecc69 solid 1px;
-  width: 30vh;
-  transform: rotate(90deg);
-  margin-top:100px;
-  margin-left: 50px;
-}
-
-.modal-content-glemt {
-  width: 35%;
-}
-
-.modal-content {
-  width: 35%;
-}
-
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
-
-/*--------- Login:Nulstilling ---------*/
-.overlay_nulstilling{
-  padding-top: 150px;
-  margin-bottom: 30px;
-}
-
-.login_formen_nulstilling{
-  height: 620px;
-  border-radius: 15px;
-  /*box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);*/
-  padding: 2%;
-  background-color: rgb(235,235,235);
-  margin-left: 20px;
-  width: 90%;
-}
-
-.con_nulstilling .login_formen_nulstilling{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.field-set_nulstilling {
-  display: flex;
-  flex-direction: column;
-  width: 85%;
-  margin-left: 20px;
-}
-
-.tilbage_knappen{
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 70%;
-  position:absolute;
-  text-decoration: none;
-}
-
-.previous {
-  background-color: #4ecc69;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  line-height: 50px;
-  text-decoration: none;
-  transition-duration: 0.5s;
-}
-
-.previous:hover {
-background-color: #71d687;
-color: white;
-}
-
-.tilbage_knappen a {
-  text-decoration: none;
-  font-size: 30px;
-}
-
-  .tilbage_knappen p {
-    padding-top: 5px;
-    padding-right: 0px;
-    line-height: 16px;
-    width: 50px;
-}
-
-.line_nulstilling{
-  border: 1px solid #4ecc69;
-  border-radius: 50px;
-  position: relative;
-  margin-left: 0px;
-  width: 100%;
-  top: 80px;
-  z-index: 1;
-}
-
-.loginImg_nulstilling{
-  display: block;
-  /*position: relative;*/
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  z-index: 90;
-  margin-bottom: 20px;
-  border: 1px solid #4ecc69;
-  
-}
-
-.login-first-visit_nulstilling h2,
-p {
-  color: #000;
-  letter-spacing: 1px;
-  margin-left: 20px;
-}
-
-.login-first-visit_nulstilling p {
-  font-size: 12px;
-  padding-top: 10px;
-  margin-left: 20px;
-}
-
-.login-first-visit_nulstilling h2 {
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-input[class='form-input_nulstilling'] {
-  height: 40px;
-  width: 85%;
-  /*margin-left: 50px;*/
-  margin-top: 10px;
-  margin-left: 20px;
-  padding-left: 15px;
-  text-align: left;
-  font-size: 12px;
-  color: #72685e;
-  outline: none;
-  border: none;
-  border-radius: 35px;
-  letter-spacing: 1px;
-  border: #4ecc69 1px solid;
-}
-
-.nulstilling_mail {
-  display: block;
-  background-color: #4ecc69;
-  border-radius: 100px;
-  border-style: none;
-  cursor: pointer;
-  color: white;
-  margin-top: 10px;
-  margin-left: 100px;
-  transition-duration: 0.5s;
-  height: 40px;
-  width: 30%;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 10px;
-  -moz-box-shadow: 0 0 20px rgb(167, 167, 167);
-  -webkit-box-shadow: 0 0 20px rgb(167, 167, 167);
-  box-shadow: 0 0 20px rgb(167, 167, 167);
-}
-
-.nulstilling_mail:hover {
-  background-color: #71d687;
-}
-
-.hr_glemt_streg{
-  border: 1px solid #4ecc69;
-  border-radius: 50px;
-  position: relative;
-  margin-left: 0px;
-  width: 100%;
-  top: 0px;
-}
-
-/*------ Media queries: Nulstilling --------*/
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .overlay_nulstilling{
-  padding-top: 150px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.con_nulstilling{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.login_formen_nulstilling{
-  width: 90%;
-}
-
-.field-set_nulstilling {
-
-  width: 50%;
-}
-
-.nulstilling_mail{
-  margin-left: 150px;
-}
-
-.tilbage_knappen{
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 60%;
-  position:absolute;
-}
-}
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
-
-/*-------Footer---------*/
-.footercontainer {
-  background-image: url('../img/wave.svg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  height: 45vh;
-  position: relative;
-}
-
-.footercontainer img {
-  max-width: 33%;
-  max-height: 33%;
-}
-
-.footercontainer p {
-  color: white;
-  position:absolute;
-  bottom: 30px;
-  right:0;
-  text-align: right;
-  font-size: 20px;
-  margin-right: 10px;
-}
-
-@media (max-width: 992px) {
-  .footercontainer p {
-    bottom: 80px;
-    font-size: 10px;
-  }
-
-  .footercontainer {
-    height: 30vh;
-    overflow: hidden;
-  }
-
-  .footercontainer img {
-    max-width: 25%;
-    max-height: 25%;
   }
 }

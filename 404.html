@@ -12,53 +12,60 @@
     <link rel="icon" type="image/png" href="img/aaparkkollegiet.png" />
 </head>
 
+<!-- Navigation -->
+<header id="main-header">
+    <div class="navcontainer">
+        <a href="index.html" class="logo"><img src="./img/Logo.png" alt="Navigation logo" width="150"></a>
+        <!-- Menupunkter -->
+        <nav id="menu">
+            <ul>
+                <li><a href="404.html">Bolig</a></li>
+                <li><a href="login.html">Det sker</a></li>
+                <li><a href="404.html">FAQ</a></li>
+                <li><a href="404.html">Varmemester</a></li>
+                <li class="fas fa-search nav-search"></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <body>
-    <header id="main-header">
-        <div class="navcontainer">
-            <a href="index.html" class="logo"><img src="./img/Logo.png" alt="Navigation logo" width="150px"></a>
-            <nav id="menu">
-                <ul>
-                    <li><a href="404.html">Bolig</a></li>
-                    <li><a href="login.html">Det sker</a></li>
-                    <li><a href="404.html">FAQ</a></li>
-                    <li><a href="404.html">Varmemester</a></li>
-                </ul>
-            </nav>
-            <li class="fas fa-search nav-search">
-            </li>
-        </div>
-    </header>
+    <!-- Indhold -->
     <section class="error-message">
         <h1>Hov!</h1>
         <p>Der bor ikke nogen her</p>
         <button><a href="index.html"><i class="fas fa-chevron-left"></i> Tilbage</a></button>
         <img src="./img/johngif.gif">
     </section>
+
+    <!-- Footer -->
     <footer>
         <div class="footercontainer">
-            <a href="#forsidesec"><img src="img/Logo.png"></a>
+            <a href="#forsidesec"><img src="img/Logo.png" alt="Footer Åpark Kollegiet logo"></a>
             <p><i class="fas fa-map-pin fa-lg"></i> Åpark Kollegiet, Åparken 1, 3, 5 & 7, 8000 Aarhus C</p>
         </div>
     </footer>
+
+    <!-- Bottom/mobil nav -->
     <nav class="bottomnav">
-        <ul>
+        <div class="bottomnavcont">
             <div class="bottommenus border">
-                <li><a href="#"><i class="far fa-building fa-lg"></i>Bolig</a></li>
+                <div><a href="404.html"><i class="far fa-building fa-lg"></i>Bolig</a></div>
+            </div>
+            <div class="bottommenus active">
+                <div><a href="#"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></div>
             </div>
             <div class="bottommenus border">
-                <li><a href="login.html"><i class="fas fa-calendar-week fa-lg"></i>Det sker</a></li>
+                <div><a href="404.html"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></div>
             </div>
             <div class="bottommenus border">
-                <li><a href="#"><i class="fas fa-info-circle fa-lg"></i>FAQ</a></li>
+                <div><a href="404.html"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></div>
             </div>
-            <div class="bottommenus border">
-                <li><a href="#"><i class="fas fa-wrench fa-lg"></i>Varmemester</a></li>
-            </div>
-        </ul>
+        </div>
     </nav>
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/ece81f241b.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
-
 
 </html>
