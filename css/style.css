@@ -665,16 +665,12 @@ article button:hover {
 /*--------- Det sker/kalender --------*/
 .kwrapper {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
   height: 500px;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
-}
-
-.storwrapper {
-  padding-top: 130px;
 }
 
 .storwrapper:after {
@@ -753,7 +749,6 @@ article button:hover {
   @media (max-width: 990px) {
     .kwrapper {
       display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
     }
 
