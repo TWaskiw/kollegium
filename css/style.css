@@ -961,7 +961,7 @@ article button:hover {
 
 /*------------Login/glemt password og popup start-------------*/
 .login_formen {
-  height: 800px;
+  height: 850px;
   border-radius: 15px;
   /*box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);*/
   padding: 2%;
