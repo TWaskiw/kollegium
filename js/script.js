@@ -79,6 +79,7 @@ function visVarer(id) {
     }
 }
 
+
 function getMeta(url) {
     var img = new Image();
     //Ment til at style billederne fra producenten, men bruges ikke pt - er dog en del af koden (for omfattende at pille ud pt)
@@ -190,28 +191,5 @@ document.onclick = function (event) {
         infoModal.style.display = 'none'
     };
 }
-
 // log-in
 //#endregion Modal
-
-
-
-// Google Autosearch API
-var searchInput = 'search_input';
-
-// Autocomplete funktionen
-$(document).ready(function () {
-    var autocomplete;
-    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-        // Begrænser funktionen til kun at virke i Danmark
-        types: ['geocode'],
-        componentRestrictions: {
-            country: "DK"
-        }
-    });
-    // Fylder baren ud, når man skriver/trykker/vælger en adresse
-    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-        var near_place = autocomplete.getPlace();
-    });
-});
-

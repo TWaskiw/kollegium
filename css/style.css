@@ -809,7 +809,7 @@ article button:hover {
   text-align: center;
 }
 
-/* Søg efter adresse */
+/* Søgefunktion */
 #search_input {
   font-size: 18px;
 }
@@ -856,6 +856,7 @@ article button:hover {
 .container {
   margin-top: 30px !important;
 }
+
 
 /* Google Maps Iframe */
 .mapsframe {
