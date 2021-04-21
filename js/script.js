@@ -1,5 +1,6 @@
 // #region madSpild
 
+//Linket hvorfra vi henter dataen til apien
 var urll = "https://api.sallinggroup.com/v1/food-waste/?zip=8000";
 
 var xhr = new XMLHttpRequest();
@@ -13,13 +14,15 @@ xhr.onreadystatechange = function () {
         //console.log(xhr.status);
         //console.log(obj);
 
+        //Her defineres variablerne til senere brug
         let butik
         let vare
-        let butikker = []
+        let butikker = [] //Er et array for alle butikker
 
+        //Variable (for) er loopet
         let i;
         for (i = 0; i < obj.length; i++) {
-
+            //Her hælder vi de info vi vil have, ind i variablen
             butik = [
                 i, // ID 
                 capitalizeFirstLetter(obj[i].store.brand), // Kæde
@@ -27,10 +30,10 @@ xhr.onreadystatechange = function () {
                 obj[i].store.hours[0].close, // Lukketid i dag
                 obj[i].store.hours[0].open // Åbningstid i dag
             ];
-            butikker[i] = butik
+            butikker[i] = butik //Her hældes hver enkelt butiks data ind i "butikker arryet"
             for (a = 0; a < obj[i].clearances.length; a++) { // Loop gennem varene
                 vare = [
-                    i,
+                    i,//ID på butikken
                     obj[i].clearances[a].product.description, // Beskrivelse
                     obj[i].clearances[a].product.image, // Billede
                     obj[i].clearances[a].offer.originalPrice, // Førpris
@@ -43,12 +46,12 @@ xhr.onreadystatechange = function () {
                 produkter.push(vare);
             }
 
-            if (a != '0') {
+            if (a != '0') { //Viser kun butikken hvis den har tilbudsvarer
                 loadButikData(i, butik[1], butik[2], '(Åben mellem ' + formatTime(butik[4]) + ' og ' + formatTime(butik[3]) + ')')
             }
 
 
-        }
+        }//Denne kalder funktionen fra linje 70 og viser butikkens varer
         const linkButik = document.querySelectorAll(".celle2");
         for (const link of linkButik) {
             link.addEventListener('click', function () {
@@ -60,17 +63,16 @@ xhr.onreadystatechange = function () {
     }
 };
 
-xhr.send();
+xhr.send(); //Kalder al det koden ovenfor som det allerførste
 
-
-
+//Går ind i produkter-arrayet og henter de vare med samme id som butikken.
 function visVarer(id) {
     let tbody = document.querySelector('#varerBody');
     tbody.innerHTML = "";
 
 
-    for (v = 0; v < produkter.length; v++) {
-        if (produkter[v][0] == id) {
+    for (v = 0; v < produkter.length; v++) { //Looper alle produkter igennem
+        if (produkter[v][0] == id) { //Hvis produktet har samme id som butikken, så vises varen.
             loadTableData(produkter[v][1], produkter[v][2], produkter[v][3], produkter[v][4], produkter[v][5], produkter[v][6], produkter[v][7])
         }
     }
@@ -78,16 +80,8 @@ function visVarer(id) {
 
 function getMeta(url) {
     var img = new Image();
-    // console.log(img)
-    // console.log( img.width + ' ' + img.height );
-
+    //Ment til at style billederne fra producenten, men bruges ikke pt - er dog en del af koden (for omfattende at pille ud pt)
     img.addEventListener("load", function () {
-
-        // url = '/img/intet_billede.jpeg'
-        // console.log(url)
-
-
-        // console.log( img.width + ' ' + img.height );
 
     });
 
@@ -95,6 +89,7 @@ function getMeta(url) {
     return url;
 }
 
+//Her smider vi ting ind i htmlen.
 function loadButikData(id, navn, adresse, tid) {
     const table = document.querySelector('.butik_wrapper')
     let logo
@@ -107,13 +102,13 @@ function loadButikData(id, navn, adresse, tid) {
     let new_div = document.createElement("DIV");
     new_div.innerHTML = "<div class='celle2' id=" + id + "><div class='liste_logo'><img class='celle2_billede' src='" + logo + "' alt='Logo'" + '' + "></img><p>" + adresse + "</p></div><div class='open'><p>" + tid + "</p></div></div>";
 
-    table.appendChild(new_div)
+    table.appendChild(new_div) //Her udføres alt ovenfor.
 };
 
+//Her smides vare-data, beskrevet nedenfor, ind i htmlen (nederste boks med besparelser osv)
 function loadTableData(navn, src, foerPris, nuPris, besparIP, besparIKR, beholdning) {
     let besparelse = Math.round(besparIP);
     const table = document.getElementById("varerBody");
-    // console.log(src)
 
     let row = table.insertRow();
     let date = row.insertCell(0);
@@ -126,6 +121,7 @@ function loadTableData(navn, src, foerPris, nuPris, besparIP, besparIKR, beholdn
 
 };
 
+//Her indsættes logoerne
 function displayLogo(brand) {
     if (brand == 'netto') {
         document.getElementById("logo").innerHTML = "<img src='img/netto_lille.png' alt='Netto billede'/>";
@@ -134,23 +130,25 @@ function displayLogo(brand) {
     }
 }
 
+//Her gøres startbogstavet stort (Føtex og Netto)
 const capitalizeFirstLetter = (s) => {
     if (typeof s !== 'string') return ''
     return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
+//Her rettes i tidspunktet, så det står læsbart
 const formatTime = (s) => {
     if (typeof s !== 'string') return ''
     let t = s.slice((s.length - 3) - 5)
-
     return t.slice(0, 5)
 }
 
 //#endregion madSpild
 
+
 //#region Modal
 
-// Get the modal
+// Get the modal - Sætter en variabel der hedder "loginModal"
 let loginModal = document.getElementById('loginModal')
 
 // Get the button that opens the modal
@@ -162,19 +160,17 @@ let infoModal = document.getElementById('infoModal')
 // Get the button that opens the modal
 let infoBtn = document.getElementById('infoBtn')
 
-// Get the <span> element that closes the modal
+// Get the <span> element that closes the modal - Krydset der lukker boksen
 let span = document.getElementsByClassName('close')[0]
 
 // When the user clicks the button, open the modal
 infoBtn.onclick = function () {
-    // modal.style.display = 'block'
-    //   setTimeout((modal.style.display = 'block'), 3000)
+
     infoModal.style.display = 'block'
-    //   setTimeout(() => {
-    //     modal.style.display = 'none'
-    //   }, 1500)
+
 }
 
+//Sørger for at når man klikker på login, så er der en forsinkelse på 1500ms før man sendes videre til kalender siden.
 loginBtn.onclick = function () {
     loginModal.style.display = 'block'
     setTimeout(() => {
@@ -183,20 +179,19 @@ loginBtn.onclick = function () {
     }, 1500)
 }
 
-// When the user clicks on <span> (x), close the modal
+// When the user clicks on <span> (x), close the modal - Krydset der lukker boksen
 span.onclick = function () {
-    infoModal.style.display = 'none'
+    infoModal.style.display = 'none' //Css i js ;)
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+document.onclick = function (event) {
     if (event.target == infoModal) {
         infoModal.style.display = 'none'
     }
 }
 
 // log-in
-
 //#endregion Modal
 
 
