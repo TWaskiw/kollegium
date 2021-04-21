@@ -309,17 +309,16 @@ article a {
 /*--------- Madspild --------*/
 .madspild {
   padding-left: 10px;
-  background-color: #fff;
   border-radius: 20px;
   width: 100%;
 }
 
 .madspild h1 {
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   width: 100%;
   text-align: center;
-  font-size: 2vh;
-  font-weight: bold;
+  /*  font-size: 2vh; */
+  /* font-weight: bold; */
   color: white;
   z-index: 1;
 }
