@@ -3,6 +3,7 @@
 //Linket hvorfra vi henter dataen til apien
 var urll = "https://api.sallinggroup.com/v1/food-waste/?zip=8000";
 
+//Denne nøgle er dannet vha af en simpel side på nettet, som laver sallings info om til json
 var xhr = new XMLHttpRequest();
 xhr.open("GET", urll);
 
@@ -33,7 +34,7 @@ xhr.onreadystatechange = function () {
             butikker[i] = butik; //Her hældes hver enkelt butiks data ind i "butikker arryet"
             for (a = 0; a < obj[i].clearances.length; a++) { // Loop gennem varene
                 vare = [
-                    i, //ID på butikken
+                    i,//ID på butikken
                     obj[i].clearances[a].product.description, // Beskrivelse
                     obj[i].clearances[a].product.image, // Billede
                     obj[i].clearances[a].offer.originalPrice, // Førpris
@@ -51,14 +52,14 @@ xhr.onreadystatechange = function () {
             }
 
 
-        } //Denne kalder funktionen fra linje 70 og viser butikkens varer
+        }//Denne kalder funktionen fra linje 70 og viser butikkens varer
         const linkButik = document.querySelectorAll(".celle2");
         for (const link of linkButik) {
             link.addEventListener('click', function () {
                 visVarer(this.id);
                 document.getElementById('varer').style.height = '500px';
 
-            })
+            });
         }
     }
 };
@@ -73,7 +74,7 @@ function visVarer(id) {
 
     for (v = 0; v < produkter.length; v++) { //Looper alle produkter igennem
         if (produkter[v][0] == id) { //Hvis produktet har samme id som butikken, så vises varen.
-            loadTableData(produkter[v][1], produkter[v][2], produkter[v][3], produkter[v][4], produkter[v][5], produkter[v][6], produkter[v][7])
+            loadTableData(produkter[v][1], produkter[v][2], produkter[v][3], produkter[v][4], produkter[v][5], produkter[v][6], produkter[v][7]);
         }
     }
 }
@@ -91,19 +92,19 @@ function getMeta(url) {
 
 //Her smider vi ting ind i htmlen.
 function loadButikData(id, navn, adresse, tid) {
-    const table = document.querySelector('.butik_wrapper')
-    let logo
+    const table = document.querySelector('.butik_wrapper');
+    let logo;
     if (navn === 'Netto') {
-        logo = 'img/netto_lille.png'
+        logo = 'img/netto_lille.png';
     } else {
-        logo = 'img/foetex_lille.png'
+        logo = 'img/foetex_lille.png';
     }
 
     let new_div = document.createElement("DIV");
     new_div.innerHTML = "<div class='celle2' id=" + id + "><div class='liste_logo'><img class='celle2_billede' src='" + logo + "' alt='Logo'" + '' + "></img><p>" + adresse + "</p></div><div class='open'><p>" + tid + "</p></div></div>";
 
-    table.appendChild(new_div) //Her udføres alt ovenfor.
-};
+    table.appendChild(new_div); //Her udføres alt ovenfor.
+}
 
 //Her smides vare-data, beskrevet nedenfor, ind i htmlen (nederste boks med besparelser osv)
 function loadTableData(navn, src, foerPris, nuPris, besparIP, besparIKR, beholdning) {
@@ -119,7 +120,7 @@ function loadTableData(navn, src, foerPris, nuPris, besparIP, besparIKR, beholdn
         date.innerHTML = "<h3>" + navn + "</h3><div class='celle1'><div class='tpris'><img class='celle1_billede' src=" + getMeta(src) + "></img><p class='pris'>kr. <span>" + nuPris + ",-</span></p></div></div><div class='besparelse'><p>Besparelse</p>" + besparelse + "%</div><div class='antal'><p>Antal</p>" + beholdning + " stk.</div>";
     }
 
-};
+}
 
 //Her indsættes logoerne
 function displayLogo(brand) {
@@ -133,15 +134,15 @@ function displayLogo(brand) {
 //Her gøres startbogstavet stort (Føtex og Netto)
 const capitalizeFirstLetter = (s) => {
     if (typeof s !== 'string') return ''
-    return s.charAt(0).toUpperCase() + s.slice(1)
-}
+    return s.charAt(0).toUpperCase() + s.slice(1);
+};
 
 //Her rettes i tidspunktet, så det står læsbart
 const formatTime = (s) => {
-    if (typeof s !== 'string') return ''
-    let t = s.slice((s.length - 3) - 5)
-    return t.slice(0, 5)
-}
+    if (typeof s !== 'string') return '';
+    let t = s.slice((s.length - 3) - 5);
+    return t.slice(0, 5);
+};
 
 //#endregion madSpild
 
@@ -149,29 +150,25 @@ const formatTime = (s) => {
 //#region Modal
 
 // Get the modal - Sætter en variabel der hedder "loginModal"
-let loginModal = document.getElementById('loginModal')
+let loginModal = document.getElementById('loginModal');
 
 // Get the button that opens the modal
-let loginBtn = document.getElementById('loginBtn')
-
-// Get the button that opens the modal
-let loginBtn1 = document.getElementById('loginBtn1')
+let loginBtn = document.getElementById('loginBtn');
 
 // Get the modal
-let infoModal = document.getElementById('infoModal')
+let infoModal = document.getElementById('infoModal');
 
 // Get the button that opens the modal
-let infoBtn = document.getElementById('infoBtn')
+let infoBtn = document.getElementById('infoBtn');
 
 // Get the <span> element that closes the modal - Krydset der lukker boksen
-let span = document.getElementsByClassName('close')[0]
+let span = document.getElementsByClassName('close')[0];
 
 // When the user clicks the button, open the modal
 infoBtn.onclick = function () {
 
     infoModal.style.display = 'block'
-
-}
+};
 
 //Sørger for at når man klikker på login, så er der en forsinkelse på 1500ms før man sendes videre til kalender siden.
 loginBtn.onclick = function () {
@@ -179,19 +176,19 @@ loginBtn.onclick = function () {
     setTimeout(() => {
         loginModal.style.display = 'none'
         window.location.href = 'https://www.froekjaer.eu/aapark/kalender.html'
-    }, 1500)
-}
+    }, 1500);
+};
 
 // When the user clicks on <span> (x), close the modal - Krydset der lukker boksen
 span.onclick = function () {
     infoModal.style.display = 'none' //Css i js ;)
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 document.onclick = function (event) {
     if (event.target == infoModal) {
         infoModal.style.display = 'none'
-    }
+    };
 }
 
 // log-in
@@ -217,3 +214,4 @@ $(document).ready(function () {
         var near_place = autocomplete.getPlace();
     });
 });
+
