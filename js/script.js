@@ -1,25 +1,21 @@
 // #region madSpild
 
 //Linket hvorfra vi henter dataen til apien
-var urll = "https://api.sallinggroup.com/v1/food-waste/?zip=8000";
-
-//Denne nøgle er dannet vha af en simpel side på nettet, som laver sallings info om til json
-var xhr = new XMLHttpRequest();
+let urll = "https://api.sallinggroup.com/v1/food-waste/?zip=8000";
+let produkter = []; //Er et arry for alle varene
+//Dataen bliver omgjort til noget vi lettere kan arbejde med (json)
+let xhr = new XMLHttpRequest();
 xhr.open("GET", urll);
 
 xhr.setRequestHeader("Authorization", "Bearer 43a92462-6aa7-4d98-8c48-402348293f73");
-
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
-        let obj = JSON.parse(xhr.responseText);
-        //console.log(xhr.status);
-        //console.log(obj);
+        let obj = JSON.parse(xhr.responseText); //Denne variabel laver det fra XML til json
 
         //Her defineres variablerne til senere brug
         let butik;
         let vare;
         let butikker = []; //Er et array for alle butikker
-        let produkter = [];
 
         //Variable (for) er loopet
         let i;
@@ -52,7 +48,6 @@ xhr.onreadystatechange = function () {
                 loadButikData(i, butik[1], butik[2], '(Åben mellem ' + formatTime(butik[4]) + ' og ' + formatTime(butik[3]) + ')');
             }
 
-
         }//Denne kalder funktionen fra linje 70 og viser butikkens varer
         const linkButik = document.querySelectorAll(".celle2");
         for (const link of linkButik) {
@@ -80,7 +75,6 @@ function visVarer(id) {
     }
 }
 
-
 function getMeta(url) {
     var img = new Image();
     //Ment til at style billederne fra producenten, men bruges ikke pt - er dog en del af koden (for omfattende at pille ud pt)
@@ -101,11 +95,11 @@ function loadButikData(id, navn, adresse, tid) {
     } else {
         logo = 'img/foetex_lille.png';
     }
-
+    //Her laves en ny div, som indeholder de data vi gerne vil vise(forarbejdet)
     let new_div = document.createElement("DIV");
     new_div.innerHTML = "<div class='celle2' id=" + id + "><div class='liste_logo'><img class='celle2_billede' src='" + logo + "' alt='Logo'" + '' + "></img><p>" + adresse + "</p></div><div class='open'><p>" + tid + "</p></div></div>";
 
-    table.appendChild(new_div); //Her udføres alt ovenfor.
+    table.appendChild(new_div); //Her udføres alt ovenfor (resultatet af forarbejdet).
 }
 
 //Her smides vare-data, beskrevet nedenfor, ind i htmlen (nederste boks med besparelser osv)
@@ -192,5 +186,28 @@ document.onclick = function (event) {
         infoModal.style.display = 'none'
     };
 }
+
 // log-in
 //#endregion Modal
+
+
+
+// Google Autosearch API
+var searchInput = 'search_input';
+
+// Autocomplete funktionen
+$(document).ready(function () {
+    var autocomplete;
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        // Begrænser funktionen til kun at virke i Danmark
+        types: ['geocode'],
+        componentRestrictions: {
+            country: "DK"
+        }
+    });
+    // Fylder baren ud, når man skriver/trykker/vælger en adresse
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var near_place = autocomplete.getPlace();
+    });
+});
+

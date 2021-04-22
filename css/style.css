@@ -722,7 +722,6 @@ article button:hover {
 
 .sammen p {
   color: rgb(20, 20, 20);
-  letter-spacing: normal !important;
 }
 
 .tekst,
@@ -809,7 +808,7 @@ article button:hover {
   text-align: center;
 }
 
-/* Søgefunktion */
+/* Søg efter adresse */
 #search_input {
   font-size: 18px;
 }
@@ -856,7 +855,6 @@ article button:hover {
 .container {
   margin-top: 30px !important;
 }
-
 
 /* Google Maps Iframe */
 .mapsframe {
